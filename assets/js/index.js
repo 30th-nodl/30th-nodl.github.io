@@ -7,8 +7,25 @@ document.getElementById("clock-box").style.borderBottomRightRadius =
 document.getElementById("clock-box").style.borderBottomLeftRadius =
   Math.random() * 60 + 40 + "%";
 
-var imgs = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"];
-// var imgs = ["🍄", "🌿", "🌈", "🎉", "💌", "🕶", "🎒", "🎓", "🎈", "📚", "🥁"];
+document.getElementById("menu__box").style.borderTopRightRadius =
+  Math.random() * 60 + 120 + "%";
+document.getElementById("menu__box").style.borderTopLeftRadius =
+  Math.random() * 60 + 40 + "%";
+document.getElementById("menu__box").style.borderBottomRightRadius =
+  Math.random() * 60 + 40 + "%";
+document.getElementById("menu__box").style.borderBottomLeftRadius =
+  Math.random() * 60 + 40 + "%";
+
+// var imgs = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"];
+var imgs = ["🍄", "🌿", "🌈", "🎉", "💌", "🕶", "🎒", "🎓", "🎈", "📚", "🥁"];
+
+var countDownDate = new Date("August 7, 2023 23:59:59").getTime();
+var now = new Date().getTime();
+var distance = countDownDate - now;
+
+var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+hours = days * 24 + hours;
 
 function updateClock() {
   var d = new Date();
@@ -65,19 +82,19 @@ function updateClock() {
 
   // set replace text
 
-  $("#seconds").html(function (index, text) {
-    this.innerHTML = text.replace(
-      /([0-z]+)/g,
-      "<img src='https://ik.imagekit.io/gyeon/nodl/sec-$1.svg'>"
-    );
-  });
+  // $("#seconds").html(function (index, text) {
+  //   this.innerHTML = text.replace(
+  //     /([0-z]+)/g,
+  //     "<img src='https://ik.imagekit.io/gyeon/nodl/sec$1.svg'>"
+  //   );
+  // });
 }
 
 updateClock();
 
 setInterval(function () {
   updateClock();
-}, 3000);
+}, 1000);
 
 // click function
 $(".about").click(function (e) {
@@ -251,13 +268,13 @@ $(".no-style").click(function () {
 
 // countdown
 
-var countDownDate = new Date("August 7, 2023 23:59:59").getTime();
-var now = new Date().getTime();
-var distance = countDownDate - now;
+// var countDownDate = new Date("August 7, 2023 23:59:59").getTime();
+// var now = new Date().getTime();
+// var distance = countDownDate - now;
 
-var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-hours = days * 24 + hours;
+// var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+// var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+// hours = days * 24 + hours;
 
 // var imgsHTML = " ";
 // for (i = 0; i < hours; i++) {
@@ -278,6 +295,34 @@ function clip() {
   });
 }
 
+// menu
+
+$(function () {
+  $("body")
+    .find("a")
+    .click(function () {
+      $("input:checkbox[id='menu__toggle']").prop("checked", false);
+    });
+
+  $("input:checkbox[id='menu__toggle']").on("change", function () {
+    if ($(this).is(":checked")) {
+      $("").css("overflow", "hidden");
+      $("").css("filter", "opacity(0.3) blur(8px)");
+    } else {
+      $("").css("overflow", "scroll");
+      $("").css("filter", "");
+    }
+  });
+});
+
+// menu button position
+
+$(function () {
+  $("#menu__box a").click(function () {
+    $("html, body").animate({scrollTop: $("nav#main ul").offset().top}, "slow");
+    return false;
+  });
+});
 
 // scroll to top
 $(function () {
@@ -291,14 +336,15 @@ $(function () {
   }
 
   window.onscroll = function () {
-    scrollFunction();
+    scrolltotopFunction();
+    menuFunction();
     switchFunction();
   };
 
-  function scrollFunction() {
+  function scrolltotopFunction() {
     if (
-      document.body.scrollTop > 20 ||
-      document.documentElement.scrollTop > 20
+      document.body.scrollTop > 100 ||
+      document.documentElement.scrollTop > 100
     ) {
       $(".scroll-to-top").css("display", "block");
     } else {
@@ -306,10 +352,21 @@ $(function () {
     }
   }
 
+  function menuFunction() {
+    if (
+      document.body.scrollTop > 812 ||
+      document.documentElement.scrollTop > 812
+    ) {
+      $(".menu__btn").css("display", "flex");
+    } else {
+      $(".menu__btn").css("display", "none");
+    }
+  }
+
   function switchFunction() {
     if (
-      document.body.scrollTop > 20 ||
-      document.documentElement.scrollTop > 20
+      document.body.scrollTop > 100 ||
+      document.documentElement.scrollTop > 100
     ) {
       $(".switch").css("display", "block");
     } else {

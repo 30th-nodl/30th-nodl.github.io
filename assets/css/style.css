@@ -573,6 +573,9 @@ h2.hidden {
   display: grid;
   max-width: 1026px;
   margin: 4rem auto 1rem auto;
+
+  font-size: 1rem;
+  letter-spacing: 0.2px;
 }
 
 /*
@@ -896,13 +899,18 @@ body.dark .extralarge a {
 }
 
 @media only screen and (max-width: 800px) {
+  #offerings {
+    font-size: 0.875rem;
+    letter-spacing: 0.1px;
+  }
+
   #offerings h3 {
     padding: 0.5rem;
     border-bottom: 1px solid #5c5a545d;
   }
 
   #offerings p {
-    margin-bottom: 4rem;
+    margin-bottom: 5rem;
     padding: 0.75rem 0.75rem 1rem 0.75rem;
   }
 

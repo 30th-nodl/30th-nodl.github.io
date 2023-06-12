@@ -32,7 +32,9 @@ html {
 
 @font-face {
   font-family: "time";
-  src: url("../font/InfiniPicto-Bold.woff") format("woff");
+  src: url("../fonts/time.woff2") format("woff2"),
+    url("../fonts/time.woff") format("woff"),
+    url("../fonts/time.otf") format("opentype");
 }
 
 @font-face {
@@ -598,9 +600,9 @@ h2.hidden {
 }
 */
 #offerings div.offering {
-  border: 2px solid rgb(163, 154, 143);
-  border-top-color: #5c5a53;
-  border-left-color: #5c5a53;
+  border: 2px solid rgba(163, 154, 143, 0.5);
+  border-top-color: #5c5a537e;
+  border-left-color: #5c5a536e;
   background: var(--light-background);
   background-image: url();
   background-size: cover;
@@ -615,7 +617,7 @@ svg {
 }
 
 figure svg {
-  height: 200px;
+  height: 120px;
 }
 
 div.offering.inactive {
@@ -629,7 +631,6 @@ div.offering.inactive a.button {
   background: transparent;
 }
 
-#offerings h3,
 h3.regular,
 b {
   font-weight: normal;
@@ -642,6 +643,17 @@ b {
   position: relative;
 }
 
+#offerings h3 {
+  font-weight: normal;
+
+  text-transform: lowercase;
+  font-size: 1.25em;
+  margin: 0;
+  border-bottom: 1px solid #5c5a545d;
+  padding: 7px 15px 7px 15px;
+  position: relative;
+}
+
 b {
   border: none;
   padding: 0;
@@ -650,8 +662,8 @@ b {
 
 #offerings p {
   margin-top: 0;
-  margin-bottom: 5rem;
-  padding: 15px 20px 20px 1.25rem;
+  margin-bottom: 4rem;
+  padding: 0.5rem 0.75rem 1rem 0.75rem;
   text-align: left;
   text-transform: lowercase;
 
@@ -685,6 +697,11 @@ footer {
   text-align: center;
 
   line-height: 1.8;
+}
+
+footer a:hover,
+.mobile-menu .section:hover {
+  text-decoration: underline;
 }
 
 #clock-box {
@@ -879,6 +896,19 @@ body.dark .extralarge a {
 }
 
 @media only screen and (max-width: 800px) {
+  #offerings h3 {
+    padding: 0.5rem;
+    border-bottom: 1px solid #5c5a545d;
+  }
+
+  #offerings p {
+    margin-bottom: 4rem;
+    padding: 0.75rem 0.75rem 1rem 0.75rem;
+  }
+
+  #offerings div.offering {
+    border: 1px solid rgba(163, 154, 143, 0.5);
+  }
   #offerings,
   section#archive.special-interviews {
     grid-template-columns: inherit !important;
@@ -941,7 +971,7 @@ body.dark .extralarge a {
   #clock-box {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
-    padding: 180px 0;
+    padding: 3rem 0;
   }
 
   .m {
@@ -980,7 +1010,7 @@ body.dark .extralarge a {
   .body-box,
   td .box {
     border: 1px solid rgb(163, 154, 143);
-    margin: 0.375em auto;
+    margin: 1rem auto;
     margin-bottom: 0;
     padding: 1rem 1.25rem 0.75rem 1.25rem;
 
@@ -1118,7 +1148,7 @@ article.twenty-one figcaption {
 }
 
 section#archive.special-interviews {
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   display: grid;
   max-width: 1026px;
   margin: 0 auto;

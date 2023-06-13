@@ -112,10 +112,10 @@ figcaption {
   font-size: 0.76em;
   font-style: italic;
 }
-
+/* 
 #clock {
   font-family: "time";
-}
+} */
 
 hr {
   margin: 2.5em 0;
@@ -571,7 +571,7 @@ h2.hidden {
 #offerings {
   grid-template-columns: 1fr 1fr 1fr;
   display: grid;
-  max-width: 1026px;
+  max-width: 812px;
   margin: 4rem auto 1rem auto;
 
   font-size: 1rem;
@@ -713,8 +713,9 @@ footer a:hover,
   transition: 3s border-radius ease;
   border-radius: 100%;
   width: 100%;
-  padding: 120px 0;
-  font-size: 6rem;
+  padding: 120px 60px;
+  font-size: 5rem;
+
   margin-bottom: 2rem;
   left: 0;
   border: 1px solid rgb(163, 154, 143);
@@ -964,8 +965,8 @@ body.dark .extralarge a {
   }
 
   #offerings div.offering {
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: 4rem;
+    margin-right: 4rem;
     margin-bottom: 1em;
   }
 
@@ -977,9 +978,9 @@ body.dark .extralarge a {
   }
 
   #clock-box {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-    padding: 3rem 0;
+    font-size: 1.875rem;
+    margin-bottom: 1.25rem;
+    padding: 3rem 4rem;
   }
 
   .m {
@@ -1118,6 +1119,7 @@ article.twenty-one {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
   max-width: 22.5em;
+  min-width: 33.3%;
   font-size: 1.5em;
   padding: 2.25em 2em;
 }
@@ -1156,7 +1158,7 @@ article.twenty-one figcaption {
 }
 
 section#archive.special-interviews {
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   display: grid;
   max-width: 1026px;
   margin: 0 auto;
@@ -1167,11 +1169,13 @@ section#archive.special-interviews article {
   padding: 15px 20px 20px 1.25rem;
 
   font-size: 1.375rem;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.2px;
 }
 
 section#archive.special-interviews article h2 {
-  font-size: 1.5em;
+  font-size: 1em;
+word-wrap: anywhere;
+
 }
 
 section#archive.special-interviews article h3 {
@@ -1179,8 +1183,9 @@ section#archive.special-interviews article h3 {
 }
 
 section#archive.special-interviews article p {
-  font-size: 0.7em;
-  font-style: italic;
+  font-size: 0.675em;
+  word-wrap: anywhere;
+  
 }
 
 section#archive.special-interviews figure.large {

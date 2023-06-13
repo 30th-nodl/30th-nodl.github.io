@@ -17,21 +17,36 @@ document.getElementById("menu__box").style.borderBottomLeftRadius =
   Math.random() * 60 + 40 + "%";
 
 // var imgs = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"];
-var imgs = ["🍄", "🌿", "🌈", "🎉", "💌", "🕶", "🎒", "🎓", "🎈", "📚", "🥁"];
+var imgs = ["🍄", "🌿", "🌈", "🎉", "💌", "🥁", "🎒", "🎓", "🎈", "📚", "🕶"];
 
-var countDownDate = new Date("August 7, 2023 23:59:59").getTime();
-var now = new Date().getTime();
-var distance = countDownDate - now;
+function diffDay() {
+  var countDownDate = new Date("August 7, 2023 23:59:59").getTime();
+  var now = new Date().getTime();
+  var distance = countDownDate - now;
 
-var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-hours = days * 24 + hours;
+  const difDay = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const difHour = Math.floor((distance / (1000 * 60 * 60)) % 24);
+  const difMin = Math.floor((distance / (1000 * 60)) % 60);
+  const difSec = Math.floor((distance / 1000) % 60);
+
+  document.getElementById(
+    "number"
+  ).innerText = `${difDay}일 ${difHour}시간 ${difMin}분 ${difSec}초`;
+}
 
 function updateClock() {
+  var countDownDate = new Date("August 7, 2023 23:59:59").getTime();
   var d = new Date();
-  var minutes = d.getMinutes();
-  var seconds = d.getSeconds();
-  var hours = d.getHours();
+  var distance = countDownDate - d;
+
+  // var hours = d.getHours();
+  // var minutes = d.getMinutes();
+  // var seconds = d.getSeconds();
+
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+  var minutes = Math.floor((distance / (1000 * 60)) % 60);
+  var seconds = Math.floor((distance / 1000) % 60);
 
   if (hours > 0 && hours <= 12) {
     hours = hours;
@@ -41,9 +56,17 @@ function updateClock() {
     hours = 12;
   }
 
+  var daysE = "";
   var hoursE = "";
   var minutesE = "";
   var secondsE = "";
+
+  for (i = 0; i < days.toString().length; i++) {
+    var stringH = days.toString().charAt(i);
+    // convert the first digit back to an integer
+    var numberH = parseInt(stringH);
+    daysE += imgs[numberH];
+  }
 
   for (i = 0; i < hours.toString().length; i++) {
     var stringH = hours.toString().charAt(i);
@@ -68,17 +91,10 @@ function updateClock() {
     secondsE += imgs[numberH];
   }
 
-  // document.getElementById("minutes").innerHTML = minutesE;
-  // document.getElementById("seconds").innerHTML = secondsE;
-  // document.getElementById("hours").innerHTML = hoursE;
-
+  $("#days").html(daysE);
+  $("#hours").html(hoursE);
   $("#minutes").html(minutesE);
   $("#seconds").html(secondsE);
-  $("#hours").html(hoursE);
-
-  // $("#minutes").attr("src", minutesE + ".svg");
-  // $("#seconds").attr("src", secondsE + ".svg");
-  // $("#hours").attr("src", hoursE + ".svg");
 
   // set replace text
 
@@ -95,6 +111,9 @@ updateClock();
 setInterval(function () {
   updateClock();
 }, 1000);
+
+diffDay();
+setInterval(diffDay, 1000);
 
 // click function
 $(".about").click(function (e) {

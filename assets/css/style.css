@@ -519,6 +519,14 @@ section {
   opacity: 0.6;
 }
 
+.anchor {
+  position: absolute;
+}
+
+.anchor img {
+  width: 6rem;
+}
+
 .body-box,
 td .box {
   text-align: left;
@@ -715,7 +723,7 @@ footer a:hover,
   padding: 120px 60px;
 
   font-size: 4rem;
-  letter-spacing: -.75px;
+  letter-spacing: -0.75px;
 
   margin-bottom: 2rem;
   left: 0;
@@ -964,7 +972,7 @@ body.dark .extralarge a {
   h1.extralarge,
   h2.extralarge {
     margin-top: 0.125em;
-    margin-bottom: 0.125em;
+    margin-bottom: 0.25em;
   }
 
   h1.extralarge {
@@ -1051,6 +1059,10 @@ body.dark .extralarge a {
 
     word-break: keep-all;
   }
+
+  .anchor img {
+  width: 5rem;
+}
 
   .news-container .small {
     margin: 0 0 0.75rem 0;

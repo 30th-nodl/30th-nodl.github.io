@@ -19,21 +19,6 @@ document.getElementById("menu__box").style.borderBottomLeftRadius =
 // var imgs = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"];
 var imgs = ["🍄", "🌿", "🌈", "🎉", "💌", "🥁", "🎒", "🎓", "🎈", "📚", "🕶"];
 
-function diffDay() {
-  var countDownDate = new Date("August 7, 2023 23:59:59").getTime();
-  var now = new Date().getTime();
-  var distance = countDownDate - now;
-
-  const difDay = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const difHour = Math.floor((distance / (1000 * 60 * 60)) % 24);
-  const difMin = Math.floor((distance / (1000 * 60)) % 60);
-  const difSec = Math.floor((distance / 1000) % 60);
-
-  document.getElementById(
-    "number"
-  ).innerText = `${difDay}일 ${difHour}시간 ${difMin}분 ${difSec}초`;
-}
-
 function updateClock() {
   var countDownDate = new Date("August 7, 2023 23:59:59").getTime();
   var d = new Date();
@@ -42,6 +27,11 @@ function updateClock() {
   // var hours = d.getHours();
   // var minutes = d.getMinutes();
   // var seconds = d.getSeconds();
+
+  const difDay = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const difHour = Math.floor((distance / (1000 * 60 * 60)) % 24);
+  const difMin = Math.floor((distance / (1000 * 60)) % 60);
+  const difSec = Math.floor((distance / 1000) % 60);
 
   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
   var hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
@@ -91,6 +81,10 @@ function updateClock() {
     secondsE += imgs[numberH];
   }
 
+  document.getElementById(
+    "number"
+  ).innerText = `${difDay}일 ${difHour}시간 ${difMin}분 ${difSec}초`;
+
   $("#days").html(daysE);
   $("#hours").html(hoursE);
   $("#minutes").html(minutesE);
@@ -111,9 +105,6 @@ updateClock();
 setInterval(function () {
   updateClock();
 }, 1000);
-
-diffDay();
-setInterval(diffDay, 1000);
 
 // click function
 $(".about").click(function (e) {

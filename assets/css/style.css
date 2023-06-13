@@ -723,7 +723,7 @@ footer a:hover,
   padding: 120px 60px;
 
   font-size: 4rem;
-  letter-spacing: -0.75px;
+  letter-spacing: -0.5px;
 
   margin-bottom: 2rem;
   left: 0;
@@ -1137,7 +1137,7 @@ article {
   line-height: 1.5;
   padding: 1.75em 1.75em 1.6em;
   max-width: 25em;
-  margin: 2em auto 5em;
+  margin: 2em auto 4em;
   background: #eee;
   border: 2px solid #998f8f;
   border-left-color: #48433a;

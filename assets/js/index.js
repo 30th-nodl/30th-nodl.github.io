@@ -1,5 +1,5 @@
 document.getElementById("clock-box").style.borderTopRightRadius =
-  Math.random() * 60 + 120 + "%";
+  Math.random() * 60 + 100 + "%";
 document.getElementById("clock-box").style.borderTopLeftRadius =
   Math.random() * 60 + 40 + "%";
 document.getElementById("clock-box").style.borderBottomRightRadius =
@@ -8,7 +8,7 @@ document.getElementById("clock-box").style.borderBottomLeftRadius =
   Math.random() * 60 + 40 + "%";
 
 document.getElementById("menu__box").style.borderTopRightRadius =
-  Math.random() * 60 + 120 + "%";
+  Math.random() * 60 + 100 + "%";
 document.getElementById("menu__box").style.borderTopLeftRadius =
   Math.random() * 60 + 40 + "%";
 document.getElementById("menu__box").style.borderBottomRightRadius =

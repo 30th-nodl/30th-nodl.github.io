@@ -213,7 +213,7 @@ h1.extralarge a.title {
 
 h1.slogan {
   width: 1000px;
-  margin: 0 auto;
+  margin: 1rem auto;
 
   user-select: none;
   -moz-user-select: none;
@@ -918,6 +918,11 @@ body.dark .extralarge a {
   #offerings div.offering {
     border: 1px solid rgba(163, 154, 143, 0.5);
   }
+
+  #offerings {
+    margin: 2.125rem auto 1rem auto;
+  }
+
   #offerings,
   section#archive.special-interviews {
     grid-template-columns: inherit !important;
@@ -980,7 +985,8 @@ body.dark .extralarge a {
   #clock-box {
     font-size: 1.875rem;
     margin-bottom: 1.25rem;
-    padding: 3rem 4rem;
+    padding: 3rem 6rem;
+    word-break: keep-all;
   }
 
   .m {
@@ -1174,8 +1180,7 @@ section#archive.special-interviews article {
 
 section#archive.special-interviews article h2 {
   font-size: 1em;
-word-wrap: anywhere;
-
+  word-wrap: anywhere;
 }
 
 section#archive.special-interviews article h3 {
@@ -1185,7 +1190,6 @@ section#archive.special-interviews article h3 {
 section#archive.special-interviews article p {
   font-size: 0.675em;
   word-wrap: anywhere;
-  
 }
 
 section#archive.special-interviews figure.large {

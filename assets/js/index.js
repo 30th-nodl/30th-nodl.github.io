@@ -328,7 +328,7 @@ $(function () {
 // menu button position
 
 $(function () {
-  $("#menu__box a").click(function () {
+  $("#menu__box a.about, #menu__box a.newsletter").click(function () {
     $("html, body").animate({scrollTop: $("nav#main ul").offset().top}, "slow");
     return false;
   });

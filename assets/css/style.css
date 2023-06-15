@@ -212,7 +212,7 @@ h1.extralarge a.title {
 }
 
 h1.slogan {
-  width: 1000px;
+  width: 960px;
   margin: 1rem auto;
 
   user-select: none;
@@ -332,7 +332,7 @@ nav#main a span.emoji {
   z-index: 10001 !important;
 
   padding: 0.5rem;
-  background-color: var(--light-background);
+  background-color: var(--light-box-background);
   border-radius: 50%;
 
   display: none;

@@ -83,12 +83,12 @@ function updateClock() {
 
   document.getElementById(
     "number"
-  ).innerText = `${difDay}일 ${difHour}시간 ${difMin}분 ${difSec}초`;
+  ).innerText = `${difDay}일 ${difHour}시간 ${difMin}분`;
 
   $("#days").html(daysE);
   $("#hours").html(hoursE);
   $("#minutes").html(minutesE);
-  $("#seconds").html(secondsE);
+  // $("#seconds").html(secondsE);
 
   // set replace text
 

@@ -159,6 +159,11 @@ main {
   font-size: 2rem;
 }
 
+#menu__box .dark-switch {
+  position: relative;
+  margin: 3rem auto;
+}
+
 .small,
 th {
   font-size: 0.75rem;
@@ -246,6 +251,7 @@ h2.extralarge {
 .news-container .small {
   text-align: center;
   margin: 0 0 0.5rem 0;
+  line-height: 1;
 }
 
 nav#main ul {
@@ -304,17 +310,24 @@ nav#main a span.emoji {
 }
 
 #menu__toggle:checked + .menu__btn > span {
+  content: " ";
   transform: rotate(45deg);
+  height: 4px;
 }
 
 #menu__toggle:checked + .menu__btn > span::before {
+  content: " ";
   top: 0;
+  height: 4px;
   transform: rotate(0deg);
+  background-color: #333;
 }
 
 #menu__toggle:checked + .menu__btn > span::after {
   top: 0;
+  height: 4px;
   transform: rotate(90deg);
+  background-color: #333;
 }
 
 #menu__toggle:checked ~ #menu__box {
@@ -340,6 +353,10 @@ nav#main a span.emoji {
   justify-content: center;
 }
 
+.menu__btn > span::before {
+  content: "Menu";
+}
+
 .menu__btn > span,
 .menu__btn > span::before,
 .menu__btn > span::after {
@@ -350,19 +367,22 @@ nav#main a span.emoji {
   width: 3rem;
   height: 4px;
 
-  background-color: #333;
+  font-size: 1.25rem;
+  line-height: 1.425;
 
+  background-color: transparent;
   background-clip: initial !important;
 }
 
 .menu__btn > span::before {
-  content: "";
   top: -16px;
+  background-color: transparent;
 }
 
 .menu__btn > span::after {
   content: "";
   top: 16px;
+  background-color: transparent;
 }
 
 #menu__box {
@@ -1090,22 +1110,41 @@ body.dark .extralarge a {
     height: 3.5rem;
   }
 
+  #menu__toggle:checked + .menu__btn > span {
+    content: " ";
+    height: 2px;
+    transform: rotate(45deg);
+  }
+
+  #menu__toggle:checked + .menu__btn > span::before {
+    content: " ";
+    top: 0;
+    height: 2px;
+    transform: rotate(0deg);
+  }
+
+  #menu__toggle:checked + .menu__btn > span::after {
+    top: 0;
+    height: 2px;
+    transform: rotate(90deg);
+  }
+  .menu__btn > span::before {
+    content: " ";
+  }
+
   .menu__btn > span,
   .menu__btn > span::before,
   .menu__btn > span::after {
     width: 1.75rem;
     height: 2px;
+
+    background-color: #333;
   }
   .menu__btn > span::before {
     top: -10px;
   }
   .menu__btn > span::after {
     top: 10px;
-  }
-
-  #menu__box .dark-switch {
-    position: relative;
-    margin: 2rem;
   }
 
   .scroll-to-top {

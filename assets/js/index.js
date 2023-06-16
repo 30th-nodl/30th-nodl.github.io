@@ -85,9 +85,9 @@ function updateClock() {
     "number"
   ).innerText = `${difDay}일 ${difHour}시간 ${difMin}분`;
 
-  $("#days").html(daysE);
-  $("#hours").html(hoursE);
-  $("#minutes").html(minutesE);
+  $("#days-1").html(daysE);
+  $("#hours-1").html(hoursE);
+  $("#minutes-1").html(minutesE);
   // $("#seconds").html(secondsE);
 
   // set replace text
@@ -311,9 +311,9 @@ $(function () {
 
   $("input:checkbox[id='menu__toggle']").on("change", function () {
     if ($(this).is(":checked")) {
-      $("main").css("opacity", ".1");
+      $("header, main, footer").css("opacity", ".2");
     } else {
-      $("main").css("opacity", "1");
+      $("header, main, footer").css("opacity", "1");
     }
   });
 });

@@ -161,7 +161,9 @@ main {
 
 #menu__box .dark-switch {
   position: relative;
-  margin: 3rem auto;
+
+  font-size: 3rem;
+  margin: 2rem;
 }
 
 .small,
@@ -285,9 +287,9 @@ nav#main a {
 nav#main a span.emoji {
   display: inline-block;
 
-  height: 88px;
-  width: 88px;
-  font-size: 2.5em;
+  height: 92px;
+  width: 92px;
+  font-size: 2em;
   border-radius: 1.25rem;
 
   border: 2px solid #5c5a53;
@@ -419,6 +421,23 @@ nav#main a span.emoji {
   -ms-user-select: none;
 
   overflow-y: hidden;
+}
+
+#menu__box h1 {
+  position: absolute;
+  left: 2.5rem;
+  height: 100%;
+
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -2px;
+
+  writing-mode: vertical-rl;
+  word-wrap: anywhere;
+}
+
+#menu__box .emoji {
 }
 
 #menu__box a {
@@ -867,7 +886,7 @@ body.dark a.button:active,
 }
 
 body.dark .scroll-to-top {
-  filter: invert(.8);
+  filter: invert(0.8);
 }
 
 body.dark .menu__btn {
@@ -1124,6 +1143,12 @@ body.dark #menu__toggle:checked + .menu__btn > span::after {
   #menu__box {
     margin: 2rem;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+
+  #menu__box h1 {
+    font-size: 0.75rem;
+    font-weight: 400;
+    left: 1.5rem;
   }
 
   #menu__box a {
@@ -1413,7 +1438,6 @@ article blockquote {
 
 article p {
   margin: 1.2em 0;
-
 }
 
 article p:last-of-type {

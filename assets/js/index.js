@@ -132,6 +132,11 @@ $(".people").click(function (e) {
   $("#people").css("display", "block");
 });
 
+// $(".archive").click(function (e) {
+//   $(".topnav").removeClass("current");
+//   $(this).addClass("current");
+// });
+
 $(".faq").click(function (e) {
   e.preventDefault();
   $(".topnav").removeClass("current");

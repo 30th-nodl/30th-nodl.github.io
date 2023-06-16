@@ -355,6 +355,7 @@ nav#main a span.emoji {
 
 .menu__btn > span::before {
   content: "Menu";
+  font-weight: 400;
 }
 
 .menu__btn > span,
@@ -866,7 +867,7 @@ body.dark a.button:active,
 }
 
 body.dark .scroll-to-top {
-  filter: invert(1);
+  filter: invert(.8);
 }
 
 body.dark .menu__btn {
@@ -936,6 +937,19 @@ body.dark h1.extralarge a,
 body.dark .extralarge a {
   color: #a0a0a0;
   text-shadow: #5c5a53 -1px -2px 0;
+}
+
+body.dark .menu__btn > span,
+body.dark .menu__btn > span::before,
+body.dark .menu__btn > span::after {
+  background-color: transparent;
+  color: #cecece;
+  font-weight: 500;
+}
+
+body.dark #menu__toggle:checked + .menu__btn > span::before,
+body.dark #menu__toggle:checked + .menu__btn > span::after {
+  background: #cecece;
 }
 
 @media only screen and (max-width: 800px) {
@@ -1068,6 +1082,17 @@ body.dark .extralarge a {
   body.dark .extralarge {
     color: #a0a0a0;
     text-shadow: #5c5a53 -1px -1px 0;
+  }
+
+  body.dark .menu__btn > span,
+  body.dark .menu__btn > span::before,
+  body.dark .menu__btn > span::after {
+    background: #cecece;
+  }
+
+  body.dark #menu__toggle:checked + .menu__btn > span::before,
+  body.dark #menu__toggle:checked + .menu__btn > span::after {
+    background: #cecece;
   }
 
   figure.large {

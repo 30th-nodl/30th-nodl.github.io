@@ -965,7 +965,7 @@ body.dark #menu__toggle:checked + .menu__btn > span::after {
   }
 
   #offerings p {
-    margin-bottom: 5rem;
+    margin-bottom: 1rem;
     padding: 0.75rem 0.75rem 1rem 0.75rem;
   }
 
@@ -1413,7 +1413,7 @@ article blockquote {
 
 article p {
   margin: 1.2em 0;
-  word-break: keep-all;
+
 }
 
 article p:last-of-type {

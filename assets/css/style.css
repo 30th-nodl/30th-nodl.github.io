@@ -252,7 +252,7 @@ h2.extralarge {
 
 .news-container .small {
   text-align: center;
-  margin: 0 0 0.5rem 0;
+  margin: 0 0 1.25rem 0;
   line-height: 1;
 }
 
@@ -356,8 +356,8 @@ nav#main a span.emoji {
 }
 
 .menu__btn > span::before {
-  content: "Menu";
-  font-weight: 400;
+  content: "메뉴";
+  font-weight: 600;
 }
 
 .menu__btn > span,
@@ -751,6 +751,7 @@ footer {
 footer a:hover,
 .mobile-menu .section:hover {
   text-decoration: underline;
+  text-underline-position: under;
 }
 
 #clock-box {

@@ -220,7 +220,7 @@ h1.extralarge a.title {
 
 h1.slogan {
   width: 960px;
-  margin: 1rem auto;
+  margin: 2rem auto 1rem auto;
 
   user-select: none;
   -moz-user-select: none;
@@ -1365,10 +1365,9 @@ section#archive article.twenty-one h2 {
 }
 
 section#archive article.twenty-one h3 {
-  opacity: 1;
   margin-top: 1em;
   font-size: 1em;
-  opacity: 0.6;
+  opacity: 0.75;
   text-decoration: none;
 }
 

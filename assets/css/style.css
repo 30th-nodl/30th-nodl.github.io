@@ -1272,8 +1272,8 @@ article {
 
   font-size: 1.375rem;
   letter-spacing: 0.3px;
-  padding: 40px;
-  max-width: 700px;
+  padding: 32px;
+  max-width: 720px;
 }
 
 article.twenty-one {
@@ -1389,7 +1389,7 @@ section#archive article.twenty-one h2 {
 }
 
 section#archive article.twenty-one h3 {
-  margin-top: 1em;
+  margin-top: 0.75em;
   font-size: 1em;
   opacity: 0.75;
   text-decoration: none;
@@ -1460,7 +1460,7 @@ article blockquote {
 }
 
 article p {
-  margin: 1.2em 0;
+  margin: 1em 0;
 }
 
 article p:last-of-type {

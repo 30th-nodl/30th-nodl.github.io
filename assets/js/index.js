@@ -329,7 +329,7 @@ $(function () {
 
 $(function () {
   $("#menu__box a.about, #menu__box a.newsletter").click(function () {
-    $("html, body").animate({scrollTop: $("nav#main ul").offset().top}, "slow");
+    $("html, body").animate({scrollTop: $("nav#main ul").offset().top}, "2000");
     return false;
   });
 });
@@ -337,7 +337,7 @@ $(function () {
 // scroll to top
 $(function () {
   $(".scroll-to-top").click(function () {
-    $("html, body").animate({scrollTop: $("body").offset().top}, "slow");
+    $("html, body").animate({scrollTop: $("body").offset().top}, "2000");
     return false;
   });
 

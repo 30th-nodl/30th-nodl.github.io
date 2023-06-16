@@ -123,13 +123,13 @@ $(".newsletter").click(function (e) {
   $("#newsletter").toggle();
 });
 
-$(".people").click(function (e) {
+$(".history").click(function (e) {
   e.preventDefault();
   swap();
   $(".topnav").removeClass("current");
   $(this).addClass("current");
   $(".toggle").css("display", "none");
-  $("#people").css("display", "block");
+  $("#history").css("display", "block");
 });
 
 // $(".archive").click(function (e) {
@@ -175,7 +175,7 @@ $(".press").click(function () {
 });
 
 // randomize teachers order
-const teachers = Array.from(document.querySelectorAll("#people p"));
+const teachers = Array.from(document.querySelectorAll("#history p"));
 
 function swap() {
   const list = teachers.map(ele => ele.innerHTML);
@@ -281,25 +281,14 @@ $(".no-style").click(function () {
   no_style();
 });
 
-// countdown
+// iframe
 
-// var countDownDate = new Date("August 7, 2023 23:59:59").getTime();
-// var now = new Date().getTime();
-// var distance = countDownDate - now;
-
-// var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-// var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-// hours = days * 24 + hours;
-
-// var imgsHTML = " ";
-// for (i = 0; i < hours; i++) {
-//   var random = imgs[Math.floor(Math.random() * imgs.length)];
-//   imgsHTML += " " + random;
-//   document.getElementById("loader").innerHTML =
-//     "<span class='subcaption small'>2023년 8월 8일, 30주년까지 " +
-//     days +
-//     "일 전 </span>";
-// }
+jQuery(".play-btn").click(function (e) {
+  e.preventDefault();
+  jQuery(this).hide();
+  jQuery("#background-video").find("iframe").show();
+  jQuery("#background-video").find("iframe")[0].src += "?autoplay=1";
+});
 
 // copy to clipboard
 
@@ -317,15 +306,14 @@ $(function () {
     .find("a")
     .click(function () {
       $("input:checkbox[id='menu__toggle']").prop("checked", false);
+      $("main").css("opacity", "1");
     });
 
   $("input:checkbox[id='menu__toggle']").on("change", function () {
     if ($(this).is(":checked")) {
-      $("").css("overflow", "hidden");
-      $("").css("filter", "opacity(0.3) blur(8px)");
+      $("main").css("opacity", ".1");
     } else {
-      $("").css("overflow", "scroll");
-      $("").css("filter", "");
+      $("main").css("opacity", "1");
     }
   });
 });

@@ -252,9 +252,9 @@ h2.extralarge {
   margin: 0.75rem 0 2.5rem 0;
 }
 
-.news-container .small {
+.body-box .small {
   text-align: center;
-  margin: 0 0 1.25rem 0;
+  margin: 0 0 2.5rem 0;
   line-height: 1;
 }
 
@@ -374,6 +374,7 @@ nav#main a span.emoji {
 
   font-size: 1.25rem;
   line-height: 1.425;
+  text-align: center;
 
   background-color: transparent;
   background-clip: initial !important;
@@ -433,6 +434,7 @@ nav#main a span.emoji {
   font-size: 0.75rem;
   font-weight: 500;
   line-height: 1;
+  text-align: center;
   letter-spacing: -2px;
 
   writing-mode: vertical-rl;
@@ -555,7 +557,7 @@ section {
   text-align: left;
   word-break: keep-all;
 
-  margin: 0 0 1.5rem 0;
+  margin: 0 0 3rem 0;
 }
 
 #info p img {
@@ -565,7 +567,7 @@ section {
 .quot {
   font-size: 90%;
   margin: 1rem 0 2rem 0 !important;
-  opacity: 0.6;
+  opacity: 0.75;
 }
 
 .anchor {
@@ -587,7 +589,7 @@ td .box {
   max-width: 1026px;
   margin: 0.5em auto;
   margin-bottom: 0;
-  padding: 1rem 1.75rem 1rem 1.75rem;
+  padding: 1.75rem 1.75rem 3.5rem 1.75rem;
 
   word-break: keep-all;
 }
@@ -816,38 +818,48 @@ table {
   max-width: 100%;
   border-spacing: 0.5em;
   border-collapse: separate;
+  margin: 0;
 }
 
-/* head of table */
+/* table */
 thead {
 }
 
-/* individual elements of the head of table */
 th {
   padding: 0px;
 }
 
-.cellFruit {
-  border-radius: 100%;
-  text-align: center;
+.cellTitle {
+  text-align: left;
+  padding: 4px 2rem 4px 0;
 }
 
-.cellFruit a {
+.cellTitle a {
   text-decoration: none;
 }
 
-/* individual elements of the body of table */
+.tablesorter-header-inner {
+  display: block;
+  margin: 0;
+
+  font-size: 1.25rem;
+  text-align: left;
+  text-decoration: underline;
+  text-underline-position: under;
+
+  cursor: pointer;
+}
 
 td {
-  border-radius: 5px;
   margin: 0.625rem;
 }
 
 td,
 th {
-  padding: 5px 1.25rem;
-  font-weight: 500;
+  padding: 4px 0;
   text-align: left;
+
+  overflow: hidden;
 }
 
 tr {
@@ -1140,7 +1152,7 @@ body.dark #menu__toggle:checked + .menu__btn > span::after {
   .body-box,
   td .box {
     border: 1px solid rgb(163, 154, 143);
-    margin: 1rem auto;
+    margin: 1.5rem auto;
     margin-bottom: 0;
     padding: 1rem 1.25rem 0.75rem 1.25rem;
 
@@ -1151,14 +1163,14 @@ body.dark #menu__toggle:checked + .menu__btn > span::after {
     width: 5rem;
   }
 
-  .news-container .small {
-    margin: 0 0 0.75rem 0;
+  .body-box .small {
+    margin: 0 0 2rem 0;
   }
 
   #menu__box {
     margin: 2rem 1.25rem;
     padding: 18.5%;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 16px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 8px;
     align-items: end;
   }
 

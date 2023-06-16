@@ -427,10 +427,10 @@ nav#main a span.emoji {
 
 #menu__box h1 {
   position: absolute;
-  left: 2.5rem;
+  left: 3rem;
   height: 100%;
 
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   font-weight: 500;
   line-height: 1;
   letter-spacing: -2px;

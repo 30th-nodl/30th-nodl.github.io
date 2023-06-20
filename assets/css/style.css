@@ -17,8 +17,7 @@
   --color-pink: #d35671;
   --color-pink-50: #d3567173;
   --color-yellow: #e9bf30;
-  --color-8: #;
-  --color-9: #;
+  --color-yellow-b: #ffc400;
 }
 
 html {
@@ -41,7 +40,12 @@ html {
 
 @font-face {
   font-family: "GowunDodum-Regular";
-  src: url("../font/GowunDodum-Regular.ttf") format("truetype");
+  src: url("../fonts/GowunDodum-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "NormalBatang-Regular";
+  src: url("../fonts/NormalBatang-Regular.otf") format("opentype");
 }
 
 @media (max-width: 699px) {
@@ -355,6 +359,12 @@ nav#main a span.emoji {
   display: none;
   align-items: center;
   justify-content: center;
+
+  transition: box-shadow 0.25s ease-out;
+}
+
+.menu__btn:hover {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 12px;
 }
 
 .menu__btn > span::before {
@@ -403,8 +413,8 @@ nav#main a span.emoji {
 
   top: 0;
   left: 100%;
-  width: 90%;
-  height: 90%;
+  width: 85%;
+  height: 85%;
 
   padding: 20%;
 
@@ -469,6 +479,11 @@ nav#main a span.emoji {
   color: #000;
 
   border-radius: 50%;
+  transition: filter 0.25s ease-out;
+}
+
+.scroll-to-top:hover {
+  filter: invert(1);
 }
 
 .scroll-to-top img {
@@ -564,6 +579,15 @@ section {
   width: 100%;
 }
 
+#info .center {
+  display: flex;
+  justify-content: center;
+}
+
+.center img {
+  width: 50% !important;
+}
+
 .quot {
   font-size: 90%;
   margin: 1rem 0 2rem 0 !important;
@@ -600,6 +624,11 @@ td .box {
 
 .body-box:last-child {
   margin-bottom: 0;
+}
+
+.serif {
+  font-family: "GowunDodum-Regular", serif;
+  letter-spacing: -0.2px;
 }
 
 .box ul {
@@ -775,7 +804,7 @@ footer a:hover,
   padding: 120px 60px;
 
   font-size: 4rem;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.2px;
   line-height: 1.2;
 
   margin-bottom: 1rem;
@@ -790,7 +819,7 @@ header p.medium {
   font-size: 0.875rem;
   line-height: 1.5;
 
-  margin-bottom: 1rem;
+  margin: 0.75rem 0;
 }
 
 #clock-box small {
@@ -996,6 +1025,15 @@ body.dark .menu__btn > span::after {
 body.dark #menu__toggle:checked + .menu__btn > span::before,
 body.dark #menu__toggle:checked + .menu__btn > span::after {
   background: #333;
+}
+
+.fetti {
+  background: transparent 50% 50% no-repeat/contain;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
 }
 
 @media only screen and (max-width: 800px) {

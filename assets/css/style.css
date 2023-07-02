@@ -79,7 +79,7 @@ html {
 }
 
 body {
-  background-color: #f8f8f8;
+  background-color: #fafafa;
   font-family: "Pretendard Variable", -apple-system, BlinkMacSystemFont,
     avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu,
     roboto, noto, arial, sans-serif;
@@ -240,6 +240,8 @@ h2.extralarge {
   font-size: 4rem;
   margin-top: 7rem;
   margin-bottom: 3.5rem;
+
+  letter-spacing: -0.25px;
 }
 
 .portal {
@@ -265,13 +267,8 @@ h2.extralarge {
 nav#main ul {
   list-style-type: none;
 
-  background-color: #f8f8f8;
   margin: 1.75rem 0 0 0;
   padding: 0;
-}
-
-body.dark nav#main ul {
-  background-color: var(--dark-background);
 }
 
 nav#main li {
@@ -298,14 +295,13 @@ nav#main a span.emoji {
   font-size: 2em;
   border-radius: 1.25rem;
 
-  border: 2px solid #5c5a53;
-  border-top-color: rgb(163, 154, 143);
-  border-left-color: rgb(163, 154, 143);
   margin: 0 0.75rem;
 
   display: flex;
   align-items: center;
   justify-content: center;
+
+  box-shadow: -8px -6px 12px #fff, 6px 8px 12px rgba(0, 0, 0, 0.15);
 }
 
 .mobile-menu {
@@ -516,9 +512,6 @@ nav#main a.current span.emoji {
   border: 2px solid rgb(163, 154, 143);
   border-top-color: #5c5a53;
   border-left-color: #5c5a53;
-  background: #dddddd;
-
-  filter: grayscale(0.9);
 }
 
 nav#main span.section {
@@ -809,9 +802,8 @@ footer a:hover,
 
   margin-bottom: 1rem;
   left: 0;
-  border: 1px solid rgb(163, 154, 143);
-  border-top-color: #5c5a53;
-  border-left-color: #5c5a53;
+
+  box-shadow: -6px -4px 12px #f0f0f0, 4px 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 header p.medium {
@@ -873,7 +865,7 @@ th {
 
   font-size: 1.25rem;
   text-align: left;
-  text-decoration: underline;
+
   text-underline-position: under;
 
   cursor: pointer;
@@ -968,9 +960,13 @@ body.dark .portal {
 }
 
 body.dark nav#main a span.emoji {
-  border: 2px solid #48433a;
+  /* border: 2px solid #48433a;
   border-top-color: #998f8f;
-  border-left-color: #998f8f;
+  border-left-color: #998f8f; */
+
+  background: #222;
+
+  box-shadow: -6px -4px 12px rgba(0, 0, 0, .8), 4px 6px 12px rgba(0, 0, 0, .1);
 }
 
 body.dark nav#main a.current span.emoji {
@@ -991,8 +987,11 @@ body.dark #offerings div.offering {
 body.dark #clock-box,
 body.dark #menu__box {
   background: #2c271e;
-  background: #151515;
+  background: #171717;
   color: #a0a0a0;
+
+  box-shadow: -6px -4px 12px rgba(0, 0, 0, 0.15),
+    4px 6px 12px rgba(0, 0, 0, 0.5);
 }
 
 body.dark svg {

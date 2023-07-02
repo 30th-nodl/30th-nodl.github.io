@@ -657,7 +657,7 @@ h2.hidden {
 }
 
 #offerings {
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   display: grid;
   max-width: 812px;
   margin: 4rem auto 1rem auto;
@@ -1073,7 +1073,6 @@ body.dark #menu__toggle:checked + .menu__btn > span::after {
   }
 
   #offerings {
-    grid-template-columns: 1fr 1fr 1fr;
     gap: 0.5rem;
   }
 

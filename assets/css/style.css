@@ -79,7 +79,7 @@ html {
 }
 
 body {
-  background-color: #fafafa;
+  background-color: #fff;
   font-family: "Pretendard Variable", -apple-system, BlinkMacSystemFont,
     avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu,
     roboto, noto, arial, sans-serif;
@@ -324,14 +324,14 @@ nav#main a span.emoji {
   top: 0;
   height: 4px;
   transform: rotate(0deg);
-  background-color: #333;
+  background-color: #fff;
 }
 
 #menu__toggle:checked + .menu__btn > span::after {
   top: 0;
   height: 4px;
   transform: rotate(90deg);
-  background-color: #333;
+  background-color: #fff;
 }
 
 #menu__toggle:checked ~ #menu__box {
@@ -343,24 +343,19 @@ nav#main a span.emoji {
 
   top: 1.75rem;
   right: 1rem;
-  width: 8rem;
-  height: 8rem;
+  width: 6rem;
+  height: 6rem;
   cursor: pointer;
   z-index: 10001 !important;
 
   padding: 0.5rem;
-  background-color: var(--color-yellow);
+  background-color: #111111d7;
+  color: #fff;
   border-radius: 50%;
 
   display: none;
   align-items: center;
   justify-content: center;
-
-  transition: box-shadow 0.25s ease-out;
-}
-
-.menu__btn:hover {
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 12px;
 }
 
 .menu__btn > span::before {
@@ -456,6 +451,43 @@ nav#main a span.emoji {
   color: #333;
 }
 
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#background-video iframe {
+  display: none;
+}
+#background-video .play-btn {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  font-size: 0px;
+  line-height: 0px;
+  background: url(http://www.legacycitychurch.com/media/cover_art/Play%20Button%20Overlay/playbutton.png)
+    center center no-repeat;
+  background-size: 120px auto;
+}
+
+.play-btn {
+  display: none;
+}
+
 /* nav#main a.archive {
     position: absolute;
     top: 0.625rem;
@@ -471,15 +503,10 @@ nav#main a span.emoji {
   bottom: 1.5rem;
   right: 1.25rem;
 
-  background-color: var(--light-background);
-  color: #000;
+  background-color: #111111d7;
+  color: #fff;
 
   border-radius: 50%;
-  transition: filter 0.25s ease-out;
-}
-
-.scroll-to-top:hover {
-  filter: invert(1);
 }
 
 .scroll-to-top img {
@@ -532,7 +559,7 @@ span.emoji,
 }
 
 span.emoji:hover {
-  background: var(--light-box-background);
+  background: var(--light-box-background) !important;
 }
 
 .emoji img {
@@ -650,7 +677,7 @@ h2.hidden {
 }
 
 #offerings {
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   display: grid;
   max-width: 812px;
   margin: 4rem auto 1rem auto;
@@ -709,7 +736,6 @@ div.offering.inactive {
 }
 
 div.offering.inactive a.button {
-  pointer-events: none;
   border-color: #5c5a54;
   border: 2px dotted #5c5a54;
   background: transparent;
@@ -791,27 +817,27 @@ footer a:hover,
   background-color: var(--light-background);
   color: #666;
   display: inline-block;
-  transition: 3s border-radius ease;
+  transition: 4s border-radius ease;
   border-radius: 100%;
   width: 100%;
-  padding: 120px 60px;
+  padding: 6rem 10rem 4rem 10rem;
 
   font-size: 4rem;
-  letter-spacing: -0.2px;
+  letter-spacing: -0.1px;
   line-height: 1.2;
 
   margin-bottom: 1rem;
   left: 0;
 
-  box-shadow: -6px -4px 12px #f0f0f0, 4px 6px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: -6px -4px 16px #f0f0f0, 4px 6px 16px rgba(0, 0, 0, 0.1);
 }
 
 header p.medium {
   font-weight: 400;
   font-size: 0.875rem;
-  line-height: 1.5;
+  line-height: 1.4;
 
-  margin: 0.75rem 0;
+  margin: 1rem 0;
 }
 
 #clock-box small {
@@ -911,6 +937,15 @@ body.dark #menu__box a {
   color: #a0a0a0;
 }
 
+body.dark .menu__btn,
+body.dark .scroll-to-top {
+  background: #f0f0f0d7;
+}
+
+body.dark .scroll-to-top img {
+  filter: invert(1);
+}
+
 body.dark a.button,
 body.dark .button-container a.button {
   border-color: #998f8f;
@@ -926,10 +961,6 @@ body.dark a.button:active,
   border-color: #998f8f;
   border-left-color: #48433a;
   border-top-color: #48433a;
-}
-
-body.dark .scroll-to-top {
-  filter: invert(0.8);
 }
 
 /* body.dark span.emoji:hover,
@@ -966,7 +997,7 @@ body.dark nav#main a span.emoji {
 
   background: #222;
 
-  box-shadow: -6px -4px 12px rgba(0, 0, 0, .8), 4px 6px 12px rgba(0, 0, 0, .1);
+  box-shadow: -6px -4px 12px rgba(0, 0, 0, 0.8), 4px 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 body.dark nav#main a.current span.emoji {
@@ -982,6 +1013,10 @@ body.dark article,
 body.dark .body-box,
 body.dark #offerings div.offering {
   background: var(--dark-box-background);
+}
+
+body.dark .archive-first-child, body.dark .archive-first-child a {
+  color: #000;
 }
 
 body.dark #clock-box,
@@ -1036,8 +1071,12 @@ body.dark #menu__toggle:checked + .menu__btn > span::after {
 }
 
 @media only screen and (max-width: 800px) {
+  #offerings svg {
+    height: 1rem;
+  }
+
   #offerings {
-    font-size: 0.8rem;
+    font-size: 0.675rem;
     letter-spacing: 0.1px;
   }
 
@@ -1075,18 +1114,22 @@ body.dark #menu__toggle:checked + .menu__btn > span::after {
     gap: 0.5rem;
   }
 
-  #archive.special-interviews {
+  .archive-first-child {
+    margin: 4rem 0;
+  }
+
+  .archive-list {
     grid-template-columns: inherit !important;
     display: block !important;
     max-width: 100% !important;
   }
 
-  section#archive.special-interviews article {
+  .archive-list article {
     margin-bottom: 3.5em !important;
   }
 
   h1.slogan {
-    width: calc(100% - 1rem);
+    width: calc(100% - 2rem);
   }
 
   .extralarge {
@@ -1126,6 +1169,10 @@ body.dark #menu__toggle:checked + .menu__btn > span::after {
     margin-bottom: 1em;
   }
 
+  nav#main ul {
+    margin: 0rem 0 0 0;
+  }
+
   nav#main a span.emoji {
     margin: 0.5rem 4px;
     height: 76px;
@@ -1136,7 +1183,7 @@ body.dark #menu__toggle:checked + .menu__btn > span::after {
   #clock-box {
     font-size: 1.75rem;
     margin-bottom: 0.5rem;
-    padding: 2rem 6rem;
+    padding: 2.5rem 6rem 1rem 6rem;
     transition: 4s border-radius ease;
     word-break: keep-all;
   }
@@ -1230,6 +1277,8 @@ body.dark #menu__toggle:checked + .menu__btn > span::after {
     width: 3.5rem;
     height: 3.5rem;
     padding: 2rem;
+
+    border: none;
   }
 
   #menu__toggle:checked + .menu__btn > span {
@@ -1260,7 +1309,7 @@ body.dark #menu__toggle:checked + .menu__btn > span::after {
     width: 1.75rem;
     height: 2px;
 
-    background-color: #333;
+    background-color: #fff;
   }
   .menu__btn > span::before {
     top: -10px;
@@ -1329,8 +1378,7 @@ article.twenty-one {
   border-radius: 0;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 6px;
 
-  max-width: 22.5em;
-  min-width: 33.3%;
+  width: 100%;
   font-size: 1.5em;
   padding: 2.25em 2em;
 }
@@ -1345,8 +1393,8 @@ article.twenty-one h1 {
 }
 
 article.twenty-one h2 {
-  margin-top: 1em;
-  font-size: 1em;
+  margin-top: 0.25rem;
+  font-size: 1rem;
   opacity: 0.6;
   /*
   font-weight: normal;
@@ -1368,7 +1416,7 @@ article.twenty-one figcaption {
   font-size: 0.7em;
 }
 
-section#archive.special-interviews {
+.archive-list {
   grid-template-columns: 1fr 1fr 1fr;
   display: grid;
   max-width: 1026px;
@@ -1376,37 +1424,36 @@ section#archive.special-interviews {
   grid-gap: 1.25rem;
 }
 
-section#archive.special-interviews article {
+.archive-list article {
   padding: 1rem 1.25rem;
 
   font-size: 1.375rem;
   letter-spacing: 0.2px;
 }
 
-section#archive.special-interviews article h2 {
-  font-size: 1em;
+.archive-list article h2 {
   word-wrap: anywhere;
 }
 
-section#archive.special-interviews article h3 {
-  font-size: 0.75em !important;
+.archive-list article h3 {
+  font-size: 0.875rem !important;
 }
 
-section#archive.special-interviews article p {
-  font-size: 0.675em;
+.archive-list article p {
+  font-size: 1rem;
   word-wrap: anywhere;
 }
 
-section#archive.special-interviews figure.large {
+.archive-list figure.large {
   margin: 0;
   width: 100%;
 }
 
-section#archive.special-interviews figure.large img {
+.archive-list figure.large img {
   border-radius: 0;
 }
 
-section#archive.special-interviews figure.large figcaption {
+.archive-list figure.large figcaption {
   margin: 1em 2.5em 0em;
 }
 
@@ -1415,29 +1462,29 @@ section#archive.special-interviews figure.large figcaption {
   margin: 2em;
   color: rgba(0, 0, 0, 0.6);
 }
-
-section#archive.special-interviews a.button {
+.archive-first-child a.button,
+.archive-list a.button {
   display: inline-block;
   margin-top: 2em;
   border: 2px solid rgba(0, 0, 0, 0.25);
   border-bottom-color: rgba(0, 0, 0, 0.6);
   border-right-color: rgba(0, 0, 0, 0.6);
 }
-
-section#archive.special-interviews a:active.button {
+.archive-first-child a:active.button,
+.archive-list a:active.button {
   border-color: rgba(0, 0, 0, 0.6);
   border-bottom-color: rgba(0, 0, 0, 0.25);
   border-right-color: rgba(0, 0, 0, 0.25);
   background: transparent;
 }
 
-section#archive article.twenty-one h2 {
+article.twenty-one h2 {
   opacity: 1;
   margin-bottom: 0;
 }
 
-section#archive article.twenty-one h3 {
-  margin-top: 0.75em;
+article.twenty-one h3 {
+  margin-top: 0.75rem;
   font-size: 1em;
   opacity: 0.75;
   text-decoration: none;
@@ -1544,8 +1591,9 @@ article h2 {
 }
 
 article h3 {
-  margin-top: 2em;
-  text-decoration: underline;
+  margin-top: 0.75em;
+  font-size: 1.25rem;
+  text-decoration: none;
 }
 
 article.letter {
@@ -1586,7 +1634,6 @@ article a {
   margin-left: 0.15em;
   font-size: 1.45em;
   vertical-align: -0.1em;
-  filter: grayscale(1);
 }
 
 .metadata .emoji:hover {
@@ -1604,13 +1651,13 @@ h3 {
 
 .metadata time {
   position: absolute;
-  left: 1.375rem;
+  left: 0.5rem;
   top: 0.75rem;
 }
 
 .metadata .emoji {
   position: absolute;
-  right: 0.875rem;
+  right: 0.5rem;
   top: 0.625rem;
 }
 
@@ -1697,14 +1744,14 @@ a.no-style {
 
 /* ARCHIVE ON HOME */
 
-section#archive article h2 {
+article h2 {
   font-size: 1.75em;
-  font-weight: normal;
-  margin-top: 0;
+  font-weight: 500;
+  margin: 0 auto;
   text-decoration: none;
 }
 
-section#archive article h2 a {
+article h2 a {
   text-decoration: none;
 }
 
@@ -1837,7 +1884,7 @@ section#archive article h2 a {
     max-width: 1280px;
   }
 
-  section#archive.special-interviews,
+  .archive-list,
   .body-box,
   td .box {
     max-width: 1800px;

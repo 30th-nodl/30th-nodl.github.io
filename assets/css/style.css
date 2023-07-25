@@ -32,20 +32,8 @@ html {
 }
 
 @font-face {
-  font-family: "time";
-  src: url("../fonts/time.woff2") format("woff2"),
-    url("../fonts/time.woff") format("woff"),
-    url("../fonts/time.otf") format("opentype");
-}
-
-@font-face {
   font-family: "GowunDodum-Regular";
   src: url("../fonts/GowunDodum-Regular.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "NormalBatang-Regular";
-  src: url("../fonts/NormalBatang-Regular.otf") format("opentype");
 }
 
 @media (max-width: 699px) {
@@ -1015,7 +1003,8 @@ body.dark #offerings div.offering {
   background: var(--dark-box-background);
 }
 
-body.dark .archive-first-child, body.dark .archive-first-child a {
+body.dark .archive-first-child,
+body.dark .archive-first-child a {
   color: #000;
 }
 
@@ -1364,11 +1353,11 @@ article {
   border: 2px solid #998f8f;
   border-left-color: #48433a;
   border-top-color: #48433a;
-  border-radius: 1.25rem;
+  border-radius: 1rem;
   position: relative;
 
   font-size: 1.375rem;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.2px;
   padding: 32px;
   max-width: 720px;
 }
@@ -1591,7 +1580,7 @@ article h2 {
 }
 
 article h3 {
-  margin-top: 0.75em;
+  margin-top: 0.5em;
   font-size: 1.25rem;
   text-decoration: none;
 }
@@ -1634,6 +1623,11 @@ article a {
   margin-left: 0.15em;
   font-size: 1.45em;
   vertical-align: -0.1em;
+  filter: grayscale(1);
+}
+
+.archive-first-child .metadata .emoji {
+  filter: none;
 }
 
 .metadata .emoji:hover {

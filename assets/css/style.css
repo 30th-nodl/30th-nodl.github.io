@@ -246,6 +246,7 @@ h2.extralarge {
   margin: 0.75rem 0 2.5rem 0;
 }
 
+#about-box .small,
 .body-box .small {
   text-align: center;
   margin: 0 0 2.5rem 0;
@@ -598,7 +599,7 @@ section {
 
 .quot {
   font-size: 90%;
-  margin: 1rem 0 2rem 0 !important;
+  margin: 0.25rem 0 2rem 0 !important;
   opacity: 0.75;
 }
 
@@ -608,6 +609,21 @@ section {
 
 .anchor img {
   width: 6rem;
+}
+
+#about-box {
+  text-align: left;
+
+  max-width: 960px;
+  margin: 3rem auto 1.5rem;
+
+  padding: 0 1rem;
+
+  word-break: keep-all;
+}
+
+#about-box:last-child {
+  margin-bottom: 0;
 }
 
 .body-box,
@@ -665,7 +681,7 @@ h2.hidden {
 }
 
 #offerings {
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   display: grid;
   max-width: 812px;
   margin: 4rem auto 1rem auto;
@@ -1003,6 +1019,10 @@ body.dark #offerings div.offering {
   background: var(--dark-box-background);
 }
 
+body.dark #about-box p {
+  background: var(--dark-background);
+}
+
 body.dark .archive-first-child,
 body.dark .archive-first-child a {
   color: #000;
@@ -1104,7 +1124,7 @@ body.dark #menu__toggle:checked + .menu__btn > span::after {
   }
 
   .archive-first-child {
-    margin: 4rem 0;
+    margin: 1rem 0 3rem;
   }
 
   .archive-list {
@@ -1140,7 +1160,7 @@ body.dark #menu__toggle:checked + .menu__btn > span::after {
   h2.extralarge {
     font-size: 3rem;
     margin-top: 4rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
 
   .small {
@@ -1221,6 +1241,14 @@ body.dark #menu__toggle:checked + .menu__btn > span::after {
     margin: 0.5em 0 0;
   }
 
+  #about-box {
+    margin: 1.5rem auto;
+    margin-bottom: 0;
+    padding: 0;
+
+    word-break: keep-all;
+  }
+
   .body-box,
   td .box {
     border: 1px solid rgb(163, 154, 143);
@@ -1235,7 +1263,8 @@ body.dark #menu__toggle:checked + .menu__btn > span::after {
     width: 5rem;
   }
 
-  .body-box .small {
+  .body-box .small,
+  #about-box .small {
     margin: 0 0 2rem 0;
   }
 
@@ -1473,9 +1502,8 @@ article.twenty-one h2 {
 }
 
 article.twenty-one h3 {
-  margin-top: 0.75rem;
+  margin-top: 0.375rem;
   font-size: 1em;
-  opacity: 0.75;
   text-decoration: none;
 }
 
@@ -1879,6 +1907,7 @@ article h2 a {
   }
 
   .archive-list,
+  #about-box,
   .body-box,
   td .box {
     max-width: 1800px;

@@ -683,7 +683,7 @@ h2.hidden {
 #offerings {
   grid-template-columns: 1fr 1fr;
   display: grid;
-  max-width: 812px;
+  max-width: 640px;
   margin: 4rem auto 1rem auto;
 
   font-size: 1rem;

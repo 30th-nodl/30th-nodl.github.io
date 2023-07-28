@@ -17,7 +17,7 @@ document.getElementById("menu__box").style.borderBottomLeftRadius =
   Math.random() * 60 + 40 + "%";
 
 // var imgs = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"];
-var imgs = ["🍄", "🌿", "🌈", "🎉", "💌", "🥁", "🎒", "🎓", "🎈", "📚", "🕶"];
+var imgs = ["🍄", "🌿", "🌈", "🎉", "💌", "🥁", "🎒", "🌾", "🎈", "🎂", "✨"];
 
 function updateClock() {
   var countDownDate = new Date("August 7, 2023 23:59:59").getTime();
@@ -161,7 +161,6 @@ $("a.button.apply").click(function (e) {
 
 function none() {
   $("#conduct").css("display", "none");
-
 }
 
 $(".press").click(function () {
@@ -308,8 +307,9 @@ $(function () {
   $("input:checkbox[id='menu__toggle']").on("change", function () {
     if ($(this).is(":checked")) {
       $("header, main, footer").css("opacity", ".2");
+      $("button.scroll-to-top").css("opacity", "0");
     } else {
-      $("header, main, footer").css("opacity", "1");
+      $("header, main, footer, button.scroll-to-top").css("opacity", "1");
     }
   });
 });
@@ -404,7 +404,6 @@ $(function () {
       "display",
       "block"
     );
-
   });
 });
 

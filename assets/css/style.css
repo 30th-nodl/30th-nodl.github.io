@@ -32,8 +32,9 @@ html {
 }
 
 @font-face {
-  font-family: "GowunDodum-Regular";
-  src: url("../fonts/GowunDodum-Regular.ttf") format("truetype");
+  font-family: "NormalBatang-Regular";
+  src: url("../fonts/NormalBatang-Regular.eot");
+  src: local(※), url("../fonts/NormalBatang-Regular.woff") format("woff");
 }
 
 @media (max-width: 699px) {
@@ -119,14 +120,13 @@ a.button,
 .button {
   text-decoration: none;
   border-radius: 5px;
-  padding: 0.5rem 14px 8px;
-  border: 1px solid #5c5a53;
+  padding: 0.5rem 1.25rem;
+  border: 2px solid #5c5a53;
   border-top-color: rgb(163, 154, 143);
   border-left-color: rgb(163, 154, 143);
   display: inline-block;
   margin: 1em 0.5em;
 
-  font-family: "GowunDodum-Regular", serif;
   letter-spacing: -0.2px;
 }
 
@@ -207,7 +207,7 @@ h1.extralarge {
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: 1px;
-  /* font-family: "GowunDodum-Regular"; */
+  /* font-family: "NormalBatang-Regular"; */
   margin: 2rem 0 0.5rem 0;
 }
 
@@ -238,23 +238,21 @@ h1.slogan {
 }
 
 h2.extralarge {
-  font-weight: 600;
+  font-weight: 400;
   font-size: 2.25rem;
   margin-top: 3rem;
   margin-bottom: 2rem;
 
   letter-spacing: -0.25px;
-  font-family: "GowunDodum-Regular", serif;
 }
 
 h2.archive--extralarge {
-  font-weight: 600;
+  font-weight: 400;
   font-size: 2.25rem;
   margin-top: 5rem;
   margin-bottom: 3.5rem;
 
   letter-spacing: -0.25px;
-  font-family: "GowunDodum-Regular", serif;
 }
 
 .portal {
@@ -686,7 +684,7 @@ td .box {
 }
 
 .serif {
-  font-family: "GowunDodum-Regular", serif;
+  font-family: "NormalBatang-Regular", serif;
   letter-spacing: -0.2px;
 }
 
@@ -923,12 +921,12 @@ th {
   cursor: pointer;
 }
 
-.tablesorter-header-inner:after {
+/* .tablesorter-header-inner:after {
   content: "↓";
 
   margin-left: 0.25rem;
   font-size: 90%;
-}
+} */
 
 td {
   margin: 0.625rem;
@@ -970,7 +968,11 @@ tr {
 }
 
 tr.history--image span {
-  opacity: 0.4;
+  font-style: italic;
+  font-size: 75%;
+  opacity: 0.6;
+
+  padding-right: 1rem;
 }
 
 .d {

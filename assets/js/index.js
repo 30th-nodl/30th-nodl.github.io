@@ -137,20 +137,12 @@ $(".history").click(function (e) {
 //   $(this).addClass("current");
 // });
 
-$(".faq").click(function (e) {
+$(".around").click(function (e) {
   e.preventDefault();
   $(".topnav").removeClass("current");
   $(this).addClass("current");
   $(".toggle").css("display", "none");
-  $("#faq").toggle();
-});
-
-$(".conduct").click(function (e) {
-  e.preventDefault();
-  $(".topnav").removeClass("current");
-  $(this).addClass("current");
-  $(".toggle").css("display", "none");
-  $("#conduct").toggle();
+  $("#around").toggle();
 });
 
 $("a.button.apply").click(function (e) {
@@ -158,10 +150,6 @@ $("a.button.apply").click(function (e) {
   $(this).toggleClass("pressed");
   $("#apply").toggle();
 });
-
-function none() {
-  $("#conduct").css("display", "none");
-}
 
 $(".press").click(function () {
   $(this).find(".answer").toggle();
@@ -317,7 +305,7 @@ $(function () {
 // menu button position
 
 $(function () {
-  $("#menu__box a.about, #menu__box a.newsletter, #menu__box a.history").click(
+  $("#menu__box a.about, #menu__box a.newsletter, #menu__box a.history, #menu__box a.around").click(
     function () {
       $("html, body").animate(
         {scrollTop: $("nav#main ul").offset().top},

@@ -596,7 +596,7 @@ nav#main span.section {
   text-align: center;
 
   font-weight: 500;
-  margin-top: 0.5rem;
+  margin-top: 0.375rem;
 }
 
 span.emoji,
@@ -699,7 +699,7 @@ td .box {
   max-width: 1026px;
   margin: 0 auto;
   margin-bottom: 0;
-  padding: 1.75rem 1.75rem 3rem;
+  padding: 1.75rem 1.5rem 3rem;
 
   word-break: keep-all;
 }
@@ -1293,14 +1293,14 @@ body.dark #menu__toggle:checked + .menu__btn > span::after {
   }
 
   nav#main a span.emoji {
-    margin: 0.5rem;
-    height: 76px;
-    width: 76px;
+    margin: 0.25rem 0.75rem;
+    height: 64px;
+    width: 64px;
     font-size: 2em;
   }
 
   .emoji img {
-    width: 1.75rem;
+    width: 1.5rem;
   }
 
   /* nav#main a.archive span.emoji svg {

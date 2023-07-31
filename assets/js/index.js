@@ -305,15 +305,16 @@ $(function () {
 // menu button position
 
 $(function () {
-  $("#menu__box a.about, #menu__box a.newsletter, #menu__box a.history, #menu__box a.around").click(
-    function () {
-      $("html, body").animate(
-        {scrollTop: $("nav#main ul").offset().top},
-        "slow"
-      );
-      return false;
-    }
-  );
+  $(
+    "#menu__box a.about, #menu__box a.newsletter, #menu__box a.history, #menu__box a.around"
+  ).click(function () {
+    $("html, body")
+      .stop(true, true)
+      .delay(100)
+      .animate({scrollTop: $("nav#main ul").offset().top}, "slow");
+    $("button.scroll-to-top").css("opacity", "1");
+    return false;
+  });
 });
 
 // scroll to top

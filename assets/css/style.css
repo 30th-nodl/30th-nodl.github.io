@@ -827,7 +827,7 @@ section {
   margin: 0 0 2rem 0;
 }
 
-#info .body-box p:last-child {
+.body-box p:last-child {
   margin: 0;
 }
 
@@ -886,7 +886,7 @@ td .box {
   max-width: 1200px;
   margin: 0 auto;
   margin-bottom: 0;
-  padding: 2rem 1.5rem 1rem;
+  padding: 2rem 1.5rem 2rem;
 }
 
 #coloring-box {
@@ -1309,7 +1309,7 @@ body.dark a.button:active,
   border-top-color: #48433a;
 }
 
-body.dark nav#main a span.emoji:hover{
+body.dark nav#main a span.emoji:hover {
   background: var(--dark-box-background);
 }
 
@@ -1388,7 +1388,7 @@ body.dark .previous-posts a:visited.button {
   color: #5e5e5e;
 }
 
-body.dark span.emoji:hover{
+body.dark span.emoji:hover {
   background: #171513;
 }
 

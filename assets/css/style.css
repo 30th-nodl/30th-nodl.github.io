@@ -1309,8 +1309,7 @@ body.dark a.button:active,
   border-top-color: #48433a;
 }
 
-body.dark nav#main a span.emoji:hover,
-body.dark .press:hover {
+body.dark nav#main a span.emoji:hover{
   background: var(--dark-box-background);
 }
 
@@ -1389,8 +1388,7 @@ body.dark .previous-posts a:visited.button {
   color: #5e5e5e;
 }
 
-body.dark span.emoji:hover,
-body.dark .press:hover {
+body.dark span.emoji:hover{
   background: #171513;
 }
 
@@ -1915,7 +1913,8 @@ body.dark article.twenty-one a {
 }
 
 body.dark article.twenty-one .metadata,
-body.dark article.twenty-one .metadata a {
+body.dark article.twenty-one .metadata a,
+body.dark .metadata time {
   color: #ccc;
 }
 

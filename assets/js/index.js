@@ -1,10 +1,10 @@
-document.getElementById("clock-box").style.borderTopRightRadius =
+document.getElementById("clock__box").style.borderTopRightRadius =
   Math.random() * 60 + 100 + "%";
-document.getElementById("clock-box").style.borderTopLeftRadius =
+document.getElementById("clock__box").style.borderTopLeftRadius =
   Math.random() * 60 + 40 + "%";
-document.getElementById("clock-box").style.borderBottomRightRadius =
+document.getElementById("clock__box").style.borderBottomRightRadius =
   Math.random() * 60 + 40 + "%";
-document.getElementById("clock-box").style.borderBottomLeftRadius =
+document.getElementById("clock__box").style.borderBottomLeftRadius =
   Math.random() * 60 + 40 + "%";
 
 document.getElementById("menu__box").style.borderTopRightRadius =
@@ -16,17 +16,21 @@ document.getElementById("menu__box").style.borderBottomRightRadius =
 document.getElementById("menu__box").style.borderBottomLeftRadius =
   Math.random() * 60 + 40 + "%";
 
-// var imgs = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"];
+document.getElementById("footer__box").style.borderTopRightRadius =
+  Math.random() * 60 + 100 + "%";
+document.getElementById("footer__box").style.borderTopLeftRadius =
+  Math.random() * 60 + 40 + "%";
+document.getElementById("footer__box").style.borderBottomRightRadius =
+  Math.random() * 60 + 40 + "%";
+document.getElementById("footer__box").style.borderBottomLeftRadius =
+  Math.random() * 60 + 40 + "%";
+
 var imgs = ["🍄", "🌿", "🌈", "🎉", "💌", "🥁", "🎒", "🌾", "🎈", "🎂", "✨"];
 
 function updateClock() {
   var countDownDate = new Date("August 7, 2023 23:59:59").getTime();
   var d = new Date();
   var distance = countDownDate - d;
-
-  // var hours = d.getHours();
-  // var minutes = d.getMinutes();
-  // var seconds = d.getSeconds();
 
   const difDay = Math.floor(distance / (1000 * 60 * 60 * 24));
   const difHour = Math.floor((distance / (1000 * 60 * 60)) % 24);
@@ -53,21 +57,18 @@ function updateClock() {
 
   for (i = 0; i < days.toString().length; i++) {
     var stringH = days.toString().charAt(i);
-    // convert the first digit back to an integer
     var numberH = parseInt(stringH);
     daysE += imgs[numberH];
   }
 
   for (i = 0; i < hours.toString().length; i++) {
     var stringH = hours.toString().charAt(i);
-    // convert the first digit back to an integer
     var numberH = parseInt(stringH);
     hoursE += imgs[numberH];
   }
 
   for (i = 0; i < minutes.toString().length; i++) {
     var stringH = minutes.toString().charAt(i);
-    // convert the first digit back to an integer
     var numberH = parseInt(stringH);
 
     minutesE += imgs[numberH];
@@ -75,7 +76,7 @@ function updateClock() {
 
   for (i = 0; i < seconds.toString().length; i++) {
     var stringH = seconds.toString().charAt(i);
-    // convert the first digit back to an integer
+
     var numberH = parseInt(stringH);
 
     secondsE += imgs[numberH];
@@ -89,15 +90,6 @@ function updateClock() {
   $("#hours-1").html(hoursE);
   $("#minutes-1").html(minutesE);
   $("#seconds-1").html(secondsE);
-
-  // set replace text
-
-  // $("#seconds").html(function (index, text) {
-  //   this.innerHTML = text.replace(
-  //     /([0-z]+)/g,
-  //     "<img src='https://ik.imagekit.io/gyeon/nodl/sec$1.svg'>"
-  //   );
-  // });
 }
 
 updateClock();
@@ -263,15 +255,6 @@ $(".no-style").click(function () {
 
   no_style();
 });
-
-// copy to clipboard
-
-function clip() {
-  var copyText = document.getElementById("clip").value;
-  navigator.clipboard.writeText(copyText).then(() => {
-    alert("클립보드에 복사되었습니다.");
-  });
-}
 
 // menu check
 

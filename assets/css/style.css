@@ -79,6 +79,11 @@ body {
 
 img {
   max-width: 100%;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 #loader {
@@ -279,6 +284,7 @@ h1.slogan {
 
 h3.slogan--caption {
   font-size: 1.25rem;
+  letter-spacing: -0.2px;
 }
 
 h1.slogan svg {
@@ -644,18 +650,23 @@ a.slide_btn {
 }
 
 #menu__box h1 {
-  position: absolute;
-  left: 3rem;
-  height: 100%;
+  font-size: 0.875rem;
+  font-weight: 400;
 
-  font-size: 0.75rem;
-  font-weight: 500;
-  line-height: 1;
   text-align: center;
-  letter-spacing: -2px;
-
-  writing-mode: vertical-rl;
   word-wrap: anywhere;
+}
+
+#menu__box figure {
+  position: absolute;
+  top: 6rem;
+  left: 6rem;
+
+  opacity: 0.75;
+}
+
+#menu__box figure img {
+  width: 15rem;
 }
 
 #menu__box .emoji img {
@@ -670,6 +681,7 @@ a.slide_btn {
 }
 
 #menu__box a {
+  font-weight: 600;
   font-size: 2.125rem;
   line-height: 1.8;
   color: #333;
@@ -1102,7 +1114,7 @@ b {
 }
 
 footer {
-  margin-top: 4rem;
+  margin-top: 2rem;
   text-align: center;
 
   line-height: 1.8;
@@ -1118,7 +1130,7 @@ footer a:hover,
   opacity: 0.5;
 }
 
-#clock-box {
+#clock__box {
   background-color: var(--light-background);
   color: #666;
   display: inline-block;
@@ -1137,6 +1149,21 @@ footer a:hover,
   box-shadow: -6px -4px 16px #f0f0f0, 4px 6px 16px rgba(0, 0, 0, 0.1);
 }
 
+#footer__box {
+  background-color: var(--light-background);
+
+  display: inline-block;
+  transition: 4s border-radius ease;
+  border-radius: 100%;
+  border: 1px solid #5c5a53;
+  border-top-color: rgb(163, 154, 143);
+  border-left-color: rgb(163, 154, 143);
+
+  padding: 6rem 10rem 4rem 10rem;
+
+  margin-bottom: 1rem;
+}
+
 header p.medium {
   font-weight: 400;
   font-size: 0.875rem;
@@ -1145,7 +1172,7 @@ header p.medium {
   margin: 1rem 0;
 }
 
-#clock-box small {
+#clock__box small {
   scale: 80%;
 }
 
@@ -1366,8 +1393,9 @@ body.dark .archive-first-child a {
   color: #000;
 }
 
-body.dark #clock-box,
-body.dark #menu__box {
+body.dark #clock__box,
+body.dark #menu__box,
+body.dark #footer__box {
   background: #2c271e;
   background: #171717;
   color: #ccc;
@@ -1421,6 +1449,10 @@ body.dark #menu__toggle:checked + .menu__btn > span::after {
 }
 
 @media only screen and (max-width: 800px) {
+  section {
+    margin-top: 2.5em;
+  }
+
   #offerings svg {
     height: 1rem;
   }
@@ -1447,7 +1479,7 @@ body.dark #menu__toggle:checked + .menu__btn > span::after {
   }
 
   #offerings {
-    margin: 1.5rem auto 1rem;
+    margin: 1.5rem auto 0;
   }
 
   #offerings a.button {
@@ -1539,9 +1571,9 @@ body.dark #menu__toggle:checked + .menu__btn > span::after {
   }
 
   nav#main a span.emoji {
-    margin: 0.25rem 0.75rem;
-    height: 72px;
-    width: 72px;
+    margin: 0.25rem 0.5rem;
+    height: 60px;
+    width: 60px;
     font-size: 2em;
   }
 
@@ -1559,12 +1591,19 @@ body.dark #menu__toggle:checked + .menu__btn > span::after {
     margin-top: -0.125rem;
   }
 
-  #clock-box {
+  #clock__box {
     font-size: 1.75rem;
     margin-bottom: 0.5rem;
     padding: 2.5rem 6rem 1rem 6rem;
     transition: 4s border-radius ease;
     word-break: keep-all;
+  }
+
+  #footer__box {
+    width: 100%;
+    margin-bottom: 0.5rem;
+    padding: 2.5rem 6rem 1rem 6rem;
+    transition: 4s border-radius ease;
   }
 
   .m {
@@ -1673,13 +1712,13 @@ body.dark #menu__toggle:checked + .menu__btn > span::after {
 
   #menu__box h1 {
     font-weight: 400;
-    letter-spacing: -1.5px;
+    letter-spacing: -0.2px;
     left: 1.5rem;
   }
 
   #menu__box a {
-    font-size: 1.25rem;
-    line-height: 2.125;
+    font-size: 1.375rem;
+    line-height: 2.25;
   }
 
   #menu__box .dark-switch {
@@ -2291,7 +2330,7 @@ article h2 a {
 }
 
 @media (min-width: 2400px) {
-  #clock-box {
+  #clock__box {
     padding: 200px 80px;
   }
 
@@ -2359,7 +2398,7 @@ article h2 a {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  #clock-box {
+  #clock__box {
     transition: none;
   }
 

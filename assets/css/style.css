@@ -1179,7 +1179,7 @@ footer a:hover,
   border-top-color: rgb(163, 154, 143);
   border-left-color: rgb(163, 154, 143);
 
-  padding: 6rem 10rem 4rem 10rem;
+  padding: 6rem 10rem 1rem 10rem;
 
   margin-bottom: 1rem;
 }
@@ -1935,11 +1935,6 @@ article.twenty-one figcaption {
   margin: 1em 2.5em 0em;
 }
 
-.series-description {
-  font-size: 1.25em;
-  margin: 2em;
-  color: rgba(0, 0, 0, 0.6);
-}
 .archive-first-child a.button,
 .archive-list a.button,
 footer a.button {
@@ -1948,10 +1943,6 @@ footer a.button {
   border: 1.5px dashed rgba(0, 0, 0, 0.25);
   border-bottom-color: rgba(0, 0, 0, 0.6);
   border-right-color: rgba(0, 0, 0, 0.6);
-}
-
-footer a.button {
-width: 100%;
 }
 
 .archive-first-child a:active.button,
@@ -1964,6 +1955,7 @@ footer a:active.button {
 }
 
 article.twenty-one h2 {
+font-weight: 600;
   opacity: 1;
   margin-bottom: 0;
 }
@@ -2040,7 +2032,7 @@ article blockquote {
 }
 
 article p {
-  margin: 1em 0;
+  margin: 1.25em 0;
 }
 
 article p:last-of-type {
@@ -2243,8 +2235,7 @@ a.no-style {
 /* ARCHIVE ON HOME */
 
 article h2 {
-  font-size: 1.75r©em;
-  font-weight: 500;
+  font-weight: 600;
   margin: 0 auto;
   text-decoration: none;
 }

@@ -803,12 +803,17 @@ nav#main span.section {
 }
 
 span.emoji,
-.press {
+.press,
+.archive-press {
   transition: background-color 0.5s ease;
 }
 
 .press.button {
   font-weight: 300;
+}
+
+.archive-press {
+  margin-bottom: 0.5em;
 }
 
 span.emoji:hover {
@@ -1009,7 +1014,7 @@ td .box {
   padding-left: 0.25em;
 }
 
-.press {
+.press, .archive-press {
   cursor: pointer;
 }
 
@@ -1180,8 +1185,6 @@ footer a:hover,
   border-left-color: rgb(163, 154, 143);
 
   padding: 6rem 10rem 1rem 10rem;
-
-  margin-bottom: 1rem;
 }
 
 header p.medium {
@@ -1568,7 +1571,6 @@ body.dark #menu__toggle:checked + .menu__btn > span::after {
   }
 
   .x-small {
-    font-size: 0.75rem;
   }
 
   .medium,
@@ -1618,7 +1620,7 @@ body.dark #menu__toggle:checked + .menu__btn > span::after {
 
   #footer__box {
     width: 100%;
-    margin-bottom: 0.5rem;
+
     padding: 2.5rem 6rem 1rem 6rem;
     transition: 4s border-radius ease;
   }
@@ -1955,7 +1957,7 @@ footer a:active.button {
 }
 
 article.twenty-one h2 {
-font-weight: 600;
+  font-weight: 600;
   opacity: 1;
   margin-bottom: 0;
 }
@@ -2035,9 +2037,7 @@ article p {
   margin: 1.25em 0;
 }
 
-article p:last-of-type {
-  margin-bottom: 0 !important;
-}
+
 
 article hr {
   border: 0;
@@ -2071,13 +2071,6 @@ article h3 {
   margin-top: 0.25em;
   font-size: 1.125rem;
   text-decoration: none;
-}
-
-article.letter {
-}
-
-article p:last-of-type {
-  margin-bottom: 0;
 }
 
 h2 {

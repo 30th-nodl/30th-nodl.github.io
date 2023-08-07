@@ -149,6 +149,12 @@ $(".press").click(function () {
   $(this).find(".disband").toggle();
 });
 
+$(".archive-press").click(function () {
+  $(this).find(".answer").toggle();
+  $(this).find(".expand").toggle();
+  $(this).find(".disband").toggle();
+});
+
 // randomize teachers order
 const teachers = Array.from(document.querySelectorAll("#history p"));
 

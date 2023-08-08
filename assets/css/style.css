@@ -91,6 +91,8 @@ img {
   overflow: hidden;
   transition: all 0.3s linear;
   transform: translateY(0);
+
+  padding: 1rem;
 }
 
 .page-loader-toggle {
@@ -1182,6 +1184,8 @@ footer a:hover,
 
   margin-bottom: 1rem;
   left: 0;
+
+  box-shadow: -4px -4px 8px #f0f0f0, 4px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #footer__box {
@@ -1617,13 +1621,17 @@ body.dark #menu__toggle:checked + .menu__btn > span::after {
     margin-top: -0.125rem;
   }
 
+  .page-loader {
+    padding: 0.5rem;
+  }
+
   .page-loader-toggle {
     transform: translateY(33.3vh);
     transition: none;
   }
 
   #clock__box {
-    width: calc(100% - 1rem);
+    width: calc(100% - .5rem);
 
     font-size: 1.75rem;
     margin-bottom: 0.5rem;

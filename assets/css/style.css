@@ -94,7 +94,7 @@ img {
 }
 
 .page-loader-toggle {
-  transform: translateY(20vh);
+  transform: translateY(25vh);
   transition: none;
 }
 

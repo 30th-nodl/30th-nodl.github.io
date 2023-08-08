@@ -1204,9 +1204,10 @@ footer a:hover,
 header p.medium {
   font-weight: 400;
   font-size: 0.875rem;
-  line-height: 1.4;
+  line-height: 1.5;
 
-  margin: 1rem 0;
+  margin: 1rem 0 0.5rem;
+  color: #333;
 }
 
 #logo {
@@ -1631,13 +1632,17 @@ body.dark #menu__toggle:checked + .menu__btn > span::after {
   }
 
   #clock__box {
-    width: calc(100% - .5rem);
+    width: calc(100% - 0.5rem);
 
     font-size: 1.75rem;
     margin-bottom: 0.5rem;
     padding: 2.5rem 6rem 1rem 6rem;
     transition: 4s border-radius ease;
     word-break: keep-all;
+  }
+
+  header p.medium {
+    font-size: 0.8rem;
   }
 
   #footer__box {

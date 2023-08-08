@@ -1,11 +1,4 @@
-document.getElementById("clock__box").style.borderTopRightRadius =
-  Math.random() * 60 + 100 + "%";
-document.getElementById("clock__box").style.borderTopLeftRadius =
-  Math.random() * 60 + 40 + "%";
-document.getElementById("clock__box").style.borderBottomRightRadius =
-  Math.random() * 60 + 40 + "%";
-document.getElementById("clock__box").style.borderBottomLeftRadius =
-  Math.random() * 60 + 40 + "%";
+
 
 document.getElementById("menu__box").style.borderTopRightRadius =
   Math.random() * 60 + 100 + "%";
@@ -25,78 +18,6 @@ document.getElementById("footer__box").style.borderBottomRightRadius =
 document.getElementById("footer__box").style.borderBottomLeftRadius =
   Math.random() * 60 + 40 + "%";
 
-var imgs = ["🍄", "🌿", "🌈", "🎉", "💌", "🥁", "🎒", "🌾", "🎈", "🎂", "✨"];
-
-function updateClock() {
-  var countDownDate = new Date("August 7, 2023 23:59:59").getTime();
-  var d = new Date();
-  var distance = countDownDate - d;
-
-  const difDay = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const difHour = Math.floor((distance / (1000 * 60 * 60)) % 24);
-  const difMin = Math.floor((distance / (1000 * 60)) % 60);
-  const difSec = Math.floor((distance / 1000) % 60);
-
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
-  var minutes = Math.floor((distance / (1000 * 60)) % 60);
-  var seconds = Math.floor((distance / 1000) % 60);
-
-  if (hours > 0 && hours <= 12) {
-    hours = hours;
-  } else if (hours > 12) {
-    hours = hours - 12;
-  } else if (hours == 0) {
-    hours = 12;
-  }
-
-  var daysE = "";
-  var hoursE = "";
-  var minutesE = "";
-  var secondsE = "";
-
-  for (i = 0; i < days.toString().length; i++) {
-    var stringH = days.toString().charAt(i);
-    var numberH = parseInt(stringH);
-    daysE += imgs[numberH];
-  }
-
-  for (i = 0; i < hours.toString().length; i++) {
-    var stringH = hours.toString().charAt(i);
-    var numberH = parseInt(stringH);
-    hoursE += imgs[numberH];
-  }
-
-  for (i = 0; i < minutes.toString().length; i++) {
-    var stringH = minutes.toString().charAt(i);
-    var numberH = parseInt(stringH);
-
-    minutesE += imgs[numberH];
-  }
-
-  for (i = 0; i < seconds.toString().length; i++) {
-    var stringH = seconds.toString().charAt(i);
-
-    var numberH = parseInt(stringH);
-
-    secondsE += imgs[numberH];
-  }
-
-  document.getElementById(
-    "number-1"
-  ).innerText = `${difDay}일 ${difHour}시간 ${difMin}분 ${difSec}초`;
-
-  $("#days-1").html(daysE);
-  $("#hours-1").html(hoursE);
-  $("#minutes-1").html(minutesE);
-  $("#seconds-1").html(secondsE);
-}
-
-updateClock();
-
-setInterval(function () {
-  updateClock();
-}, 1000);
 
 // click function
 $(".about").click(function (e) {

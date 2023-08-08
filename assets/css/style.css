@@ -1175,8 +1175,8 @@ footer a:hover,
   display: inline-block;
   transition: 5s border-radius ease;
   border-radius: 100%;
-  max-width: 1080px;
-  padding: 6rem 10rem 4rem 10rem;
+  max-width: 1440px;
+  padding: 5rem 10rem 2.5rem 10rem;
 
   font-size: 4rem;
   letter-spacing: -0.01px;

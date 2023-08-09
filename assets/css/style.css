@@ -89,15 +89,11 @@ img {
 .page-loader {
   z-index: 100001;
   overflow: hidden;
-  transition: all 0.3s linear;
-  transform: translateY(0);
 
   padding: 1rem;
 }
 
 .page-loader-toggle {
-  transform: translateY(25vh);
-  transition: none;
 }
 
 main,
@@ -1627,8 +1623,6 @@ body.dark #menu__toggle:checked + .menu__btn > span::after {
   }
 
   .page-loader-toggle {
-    transform: translateY(33.3vh);
-    transition: none;
   }
 
   #clock__box {

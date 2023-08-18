@@ -1,11 +1,5 @@
 // loading
 
-$(window).on("load", function () {
-  setTimeout(function () {
-    $(".page-loader").removeClass("page-loader-toggle");
-    $("main, .mobile-menu, footer").fadeIn("1200");
-  }, 800);
-});
 
 // __box border-radius
 

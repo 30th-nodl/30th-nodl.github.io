@@ -1429,7 +1429,7 @@ body.dark #menu__box,
 body.dark #footer__box {
   background: #2c271e;
   background: #171717;
-  color: #ccc;
+  color: #ccc !important;
 
   box-shadow: -6px -4px 12px rgba(0, 0, 0, 0.15),
     4px 6px 12px rgba(0, 0, 0, 0.5);
@@ -1454,7 +1454,6 @@ body.dark span.emoji:hover {
 body.dark h1.extralarge a,
 body.dark .extralarge a {
   color: #ccc;
-  text-shadow: #5c5a53 -1px -2px 0;
 }
 
 body.dark .menu__btn > span,

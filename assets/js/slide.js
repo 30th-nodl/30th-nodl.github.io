@@ -58,15 +58,4 @@ $(function () {
       prevEl: ".swiper-button-prev",
     },
   });
-
-  var thumbs03 = new Swiper(".gallery-thumbs-03", {
-    slidesPerView: "auto",
-    spaceBetween: 12,
-    centeredSlides: true,
-    loop: true,
-    slideToClickedSlide: true,
-  });
-
-  slider03.controller.control = thumbs03;
-  thumbs03.controller.control = slider03;
 });

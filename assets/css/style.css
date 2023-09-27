@@ -1473,6 +1473,10 @@ body.dark svg {
   fill: #ccc;
 }
 
+body.dark .offering svg {
+  filter: invert(1);
+}
+
 body.dark .emoji img {
   filter: invert(1);
 }
@@ -1483,6 +1487,10 @@ body.dark .previous-posts a:visited.button {
 
 body.dark span.emoji:hover {
   background: #171513;
+}
+
+body.dark header p.medium {
+  color: #ccc;
 }
 
 body.dark h1.extralarge a,

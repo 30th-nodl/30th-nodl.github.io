@@ -290,7 +290,7 @@ h1.slogan {
 }
 
 h3.slogan--caption {
-  font-size: 1.25rem;
+  font-size: 1rem;
   letter-spacing: -0.2px;
 }
 
@@ -301,7 +301,8 @@ h1.slogan svg {
 
 h2.extralarge {
   font-weight: 600;
-  font-size: 1.875rem;
+  font-size: 2.5rem;
+  line-height: 1.5;
   margin: 0 auto 2rem;
 
   letter-spacing: -0.25px;
@@ -318,7 +319,7 @@ h3.medium {
 
 h2.archive--extralarge {
   font-weight: 600;
-  font-size: 1.875rem;
+  font-size: 2.5rem;
   margin-top: 5rem;
   margin-bottom: 3.5rem;
 
@@ -378,7 +379,7 @@ nav#main a span.emoji {
   font-size: 2.75em;
   border-radius: 1.25rem;
 
-  margin: 0 0.75rem;
+  margin: 0 0.375rem;
 
   display: flex;
   align-items: center;
@@ -776,6 +777,10 @@ nav#main a span.emoji {
     top: 0.625rem;
     right: 0.625rem;
 } */
+
+.li-archive {
+  margin-left: 0.25rem !important;
+}
 
 .scroll-to-top {
   display: none;
@@ -1608,13 +1613,13 @@ body.dark #menu__toggle:checked + .menu__btn > span::after {
   }
 
   h2.extralarge {
-    font-size: 1.625rem;
+    font-size: 1.75rem;
 
     margin: 0 auto 1.5rem;
   }
 
   h2.archive--extralarge {
-    font-size: 1.625rem;
+    font-size: 1.75rem;
     margin-top: 4rem;
     margin-bottom: 3rem;
   }
@@ -1647,6 +1652,10 @@ body.dark #menu__toggle:checked + .menu__btn > span::after {
     height: 60px;
     width: 60px;
     font-size: 2em;
+  }
+
+  .li-archive {
+    margin-left: 0rem;
   }
 
   .emoji img {

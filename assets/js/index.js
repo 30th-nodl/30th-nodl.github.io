@@ -87,9 +87,9 @@ function updateClock() {
     secondsE += imgs[numberH];
   }
 
-  document.getElementById(
-    "number-1"
-  ).innerText = `${difDay}일 ${difHour}시간 ${difMin}분 ${difSec}초`;
+  document.getElementById("number-1").innerText = `${difDay + 1}일 ${
+    difHour + 1
+  }시간 ${difMin}분 ${difSec}초`;
 
   // $("#days-1").html(daysE);
   // $("#hours-1").html(hoursE);

@@ -1,6 +1,4 @@
 // loading
-
-
 // __box border-radius
 
 document.getElementById("clock__box").style.borderTopRightRadius =
@@ -35,7 +33,7 @@ document.getElementById("footer__box").style.borderBottomLeftRadius =
 var imgs = ["🍄", "🌿", "🌈", "🎉", "💌", "🥁", "🎒", "🌾", "🎈", "🎂", "✨"];
 
 function updateClock() {
-  var countDownDate = new Date("October 16, 2023 23:59:59").getTime();
+  var countDownDate = new Date("October 17, 2023 00:00:00").getTime();
   var d = new Date();
   var distance = countDownDate - d;
 
@@ -93,10 +91,10 @@ function updateClock() {
     "number-1"
   ).innerText = `${difDay}일 ${difHour}시간 ${difMin}분 ${difSec}초`;
 
-  $("#days-1").html(daysE);
-  $("#hours-1").html(hoursE);
-  $("#minutes-1").html(minutesE);
-  $("#seconds-1").html(secondsE);
+  // $("#days-1").html(daysE);
+  // $("#hours-1").html(hoursE);
+  // $("#minutes-1").html(minutesE);
+  // $("#seconds-1").html(secondsE);
 }
 
 updateClock();

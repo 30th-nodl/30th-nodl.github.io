@@ -33,7 +33,7 @@ document.getElementById("footer__box").style.borderBottomLeftRadius =
 var imgs = ["🍄", "🌿", "🌈", "🎉", "💌", "🥁", "🎒", "🌾", "🎈", "🎂", "✨"];
 
 function updateClock() {
-  var countDownDate = new Date("October 17, 2023 00:00:00").getTime();
+  var countDownDate = new Date("October 17, 2024 00:00:00").getTime();
   var d = new Date();
   var distance = countDownDate - d;
 

@@ -640,7 +640,7 @@ nav#main a span.emoji {
   padding: 0;
   margin: 0;
   position: absolute;
-  width: 3rem;
+  width: 2.5rem;
   height: 4px;
 
   font-size: 1.25rem;
@@ -730,8 +730,8 @@ nav#main a span.emoji {
 
 #menu__box a {
   font-weight: 500;
-  font-size: 2.125rem;
-  line-height: 2;
+  font-size: 2rem;
+  line-height: 1.65;
   color: #333;
 }
 
@@ -1863,7 +1863,7 @@ body.dark #menu__toggle:checked + .menu__btn > span::after {
     width: 2.5rem;
     height: 2.5rem;
     background: transparent;
-    content: url("../img/svg/horizontal-menu.svg");
+    content: url("../img/svg/menu.svg");
   }
   .menu__btn > span::before {
     top: -10px;

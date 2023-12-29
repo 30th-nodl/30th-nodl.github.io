@@ -472,6 +472,8 @@ nav#main a span.emoji {
   text-align: center;
   overflow: hidden;
   opacity: 0.6;
+
+  cursor: pointer;
 }
 
 .gallery-thumbs-01 .swiper-slide-active,
@@ -479,6 +481,7 @@ nav#main a span.emoji {
 .gallery-thumbs-03 .swiper-slide-active,
 .gallery-thumbs-04 .swiper-slide-active {
   opacity: 1;
+  cursor: inherit;
 }
 
 .gallery-thumbs-01 .swiper-slide img,
@@ -494,7 +497,10 @@ nav#main a span.emoji {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background: #111111;
+  background: #fff;
+
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
 .gallery .swiper-button-next:after {
@@ -506,8 +512,9 @@ nav#main a span.emoji {
   width: 10px;
   height: 10px;
   margin: 0 10px;
-  border-top: 2px solid #fff;
-  border-right: 2px solid #fff;
+  border-top: 2px solid #000;
+  border-right: 2px solid #000;
+
   transform: rotate(45deg) translate(-1px, 1px);
 }
 
@@ -515,7 +522,10 @@ nav#main a span.emoji {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background: #111111;
+  background: #fff;
+
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
 .gallery .swiper-button-prev:after {
@@ -527,8 +537,9 @@ nav#main a span.emoji {
   width: 10px;
   height: 10px;
   margin: 0 10px;
-  border-left: 2px solid #fff;
-  border-bottom: 2px solid #fff;
+  border-left: 2px solid #000;
+  border-bottom: 2px solid #000;
+
   transform: rotate(45deg) translate(1px, -1px);
 }
 

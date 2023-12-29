@@ -320,7 +320,7 @@ h3.medium {
 h2.archive--extralarge {
   font-weight: 600;
   font-size: 1.75rem;
-  margin-top: 5rem;
+  margin-top: 6rem;
   margin-bottom: 2.5rem;
 
   letter-spacing: -0.25px;
@@ -471,7 +471,7 @@ nav#main a span.emoji {
   height: 3.5rem;
   text-align: center;
   overflow: hidden;
-  opacity: 0.6;
+  opacity: 0.5;
 
   cursor: pointer;
 }
@@ -499,8 +499,8 @@ nav#main a span.emoji {
   border-radius: 50%;
   background: #fff;
 
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  box-shadow: rgba(30, 32, 33, 0.3) 0px 1px 2px 0px,
+    rgba(30, 32, 33, 0.15) 0px 2px 6px 2px;
 }
 
 .gallery .swiper-button-next:after {
@@ -524,8 +524,8 @@ nav#main a span.emoji {
   border-radius: 50%;
   background: #fff;
 
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  box-shadow: rgba(30, 32, 33, 0.3) 0px 1px 2px 0px,
+    rgba(30, 32, 33, 0.15) 0px 2px 6px 2px;
 }
 
 .gallery .swiper-button-prev:after {
@@ -1014,7 +1014,7 @@ td .box {
 
 .around--image--box {
   border-radius: 1.5rem;
-  border: 1px dashed rgb(163, 154, 143);
+  border: 1px solid rgb(163, 154, 143);
   border-bottom-color: #5c5a53;
   border-right-color: #5c5a53;
 

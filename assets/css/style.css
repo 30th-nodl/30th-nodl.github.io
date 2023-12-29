@@ -51,19 +51,19 @@ html {
 
 @media (min-width: 1000px) and (max-width: 1999px) {
   html {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
 @media (min-width: 2000px) and (max-width: 2399px) {
   html {
-    font-size: 24px;
+    font-size: 20px;
   }
 }
 
 @media (min-width: 2400px) {
   html {
-    font-size: 28px;
+    font-size: 24px;
   }
 }
 
@@ -301,9 +301,9 @@ h1.slogan svg {
 
 h2.extralarge {
   font-weight: 600;
-  font-size: 2.5rem;
+  font-size: 1.75rem;
   line-height: 1.5;
-  margin: 0 auto 2rem;
+  margin: 0 auto 1rem;
 
   letter-spacing: -0.25px;
   text-align: center;
@@ -319,9 +319,9 @@ h3.medium {
 
 h2.archive--extralarge {
   font-weight: 600;
-  font-size: 2.5rem;
+  font-size: 1.75rem;
   margin-top: 5rem;
-  margin-bottom: 3.5rem;
+  margin-bottom: 2.5rem;
 
   letter-spacing: -0.25px;
   text-align: center;
@@ -398,68 +398,54 @@ nav#main a span.emoji {
   margin: 3rem auto 4rem;
 }
 
-.gallery-slider-01,
-.gallery-slider-02,
-.gallery-slider-03 {
+.swiper {
   width: 100%;
   height: auto;
   margin: 0 0 10px 0;
 }
 
-.gallery-slider-01 .swiper-slide,
-.gallery-slider-02 .swiper-slide,
-.gallery-slider-03 .swiper-slide {
+.swiper .swiper-slide {
   width: 100%;
   height: 187px;
 }
 
 @media screen and (min-width: 320px) {
   .gallery {
-    max-width: 240px;
+    max-width: 250px;
   }
-  .gallery-slider-01 .swiper-slide,
-  .gallery-slider-02 .swiper-slide,
-  .gallery-slider-03 .swiper-slide {
+  .swiper .swiper-slide {
     height: 160px;
   }
 }
 
 @media screen and (min-width: 413px) {
   .gallery {
-    max-width: 280px;
+    max-width: 320px;
   }
-  .gallery-slider-01 .swiper-slide,
-  .gallery-slider-02 .swiper-slide,
-  .gallery-slider-03 .swiper-slide {
+  .swiper .swiper-slide {
     height: 187px;
   }
 }
 
 @media screen and (min-width: 800px) {
   .gallery {
-    max-width: 720px;
+    max-width: 640px;
   }
-  .gallery-slider-01 .swiper-slide,
-  .gallery-slider-02 .swiper-slide,
-  .gallery-slider-03 .swiper-slide {
+  .swiper .swiper-slide {
     height: 480px;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .gallery {
-    max-width: 960px;
+    max-width: 640px;
   }
-  .gallery-slider-01 .swiper-slide,
-  .gallery-slider-02 .swiper-slide,
-  .gallery-slider-03 .swiper-slide {
+  .swiper .swiper-slide {
     height: 640px;
   }
 }
 
-.gallery-slider-01 .swiper-slide img,
-.gallery-slider-02 .swiper-slide img,
-.gallery-slider-03 .swiper-slide img {
+.swiper .swiper-slide img {
   display: block;
   width: 100%;
   height: 100%;
@@ -468,7 +454,9 @@ nav#main a span.emoji {
 }
 
 .gallery-thumbs-01,
-.gallery-thumbs-02 {
+.gallery-thumbs-02,
+.gallery-thumbs-03,
+.gallery-thumbs-04 {
   margin-top: 0.75rem;
   width: 100%;
   padding: 0;
@@ -477,23 +465,26 @@ nav#main a span.emoji {
 
 .gallery-thumbs-01 .swiper-slide,
 .gallery-thumbs-02 .swiper-slide,
-.gallery-thumbs-03 .swiper-slide {
+.gallery-thumbs-03 .swiper-slide,
+.gallery-thumbs-04 .swiper-slide {
   width: 3.5rem;
   height: 3.5rem;
   text-align: center;
   overflow: hidden;
-  opacity: 1;
+  opacity: 0.6;
 }
 
 .gallery-thumbs-01 .swiper-slide-active,
 .gallery-thumbs-02 .swiper-slide-active,
-.gallery-thumbs-03 .swiper-slide-active {
+.gallery-thumbs-03 .swiper-slide-active,
+.gallery-thumbs-04 .swiper-slide-active {
   opacity: 1;
 }
 
 .gallery-thumbs-01 .swiper-slide img,
 .gallery-thumbs-02 .swiper-slide img,
-.gallery-thumbs-03 .swiper-slide img {
+.gallery-thumbs-03 .swiper-slide img,
+.gallery-thumbs-04 .swiper-slide img {
   width: auto;
   height: 100%;
   object-fit: cover;
@@ -929,7 +920,7 @@ section {
 #about-box {
   text-align: left;
 
-  max-width: 960px;
+  max-width: 720px;
   margin: 3rem auto 1.5rem;
 
   padding: 0 1rem;
@@ -951,7 +942,7 @@ td .box {
   border-top-color: #5c5a53;
   border-left-color: #5c5a53;
 
-  max-width: 1200px;
+  max-width: 840px;
   margin: 0 auto;
   margin-bottom: 0;
   padding: 2rem 1.5rem 2rem;
@@ -996,9 +987,9 @@ td .box {
   display: grid;
   grid-template-columns: 1fr;
 
-  gap: 1rem;
+  gap: 2rem;
 
-  max-width: 1200px;
+  max-width: 840px;
   margin: 1rem auto 0;
 }
 
@@ -1713,7 +1704,8 @@ body.dark #menu__toggle:checked + .menu__btn > span::after {
 
   .gallery-thumbs-01,
   .gallery-thumbs-02,
-  .gallery-thumbs-03 {
+  .gallery-thumbs-03,
+  .gallery-thumbs-04 {
     margin-top: 0.5rem;
   }
 
@@ -1953,7 +1945,7 @@ article.twenty-one figcaption {
 .archive-list {
   grid-template-columns: 1fr 1fr 1fr;
   display: grid;
-  max-width: 1200px;
+  max-width: 840px;
   margin: 0 auto;
   grid-gap: 1.25rem;
 }
@@ -2060,7 +2052,7 @@ article h2,
 article h3 {
   margin-bottom: 1em;
   margin-top: -0.25em;
-  font-size: 1.25em;
+  font-size: 1em;
   line-height: 1.35;
 }
 
@@ -2080,7 +2072,7 @@ article h2 {
 
 article h3 {
   margin-top: 0.25em;
-  font-size: 1.125rem;
+  font-size: 0.875em;
   text-decoration: none;
 }
 

@@ -411,7 +411,7 @@ nav#main a span.emoji {
 
 @media screen and (min-width: 320px) {
   .gallery {
-    max-width: 250px;
+    max-width: 280px;
   }
   .swiper .swiper-slide {
     height: 160px;

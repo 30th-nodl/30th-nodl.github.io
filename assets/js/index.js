@@ -33,7 +33,7 @@ document.getElementById("footer__box").style.borderBottomLeftRadius =
 var imgs = ["🍄", "🌿", "🌈", "🎉", "💌", "🥁", "🎒", "🌾", "🎈", "🎂", "✨"];
 
 function updateClock() {
-  var countDownDate = new Date("October 17, 2023 00:00:00").getTime();
+  var countDownDate = new Date("August 8, 2024 00:00:00").getTime();
   var d = new Date();
   var distance = countDownDate - d;
 
@@ -91,10 +91,10 @@ function updateClock() {
     difHour + 1
   }시간 ${difMin}분 ${difSec}초`;
 
-  // $("#days-1").html(daysE);
-  // $("#hours-1").html(hoursE);
-  // $("#minutes-1").html(minutesE);
-  // $("#seconds-1").html(secondsE);
+  $("#days-1").html(daysE);
+  $("#hours-1").html(hoursE);
+  $("#minutes-1").html(minutesE);
+  $("#seconds-1").html(secondsE);
 }
 
 updateClock();
@@ -130,17 +130,20 @@ $(".history").click(function (e) {
   $("#history").css("display", "block");
 });
 
-// $(".archive").click(function (e) {
-//   $(".topnav").removeClass("current");
-//   $(this).addClass("current");
-// });
-
 $(".around").click(function (e) {
   e.preventDefault();
   $(".topnav").removeClass("current");
   $(this).addClass("current");
   $(".toggle").css("display", "none");
   $("#around").toggle();
+});
+
+$(".nodeul-monthly").click(function (e) {
+  e.preventDefault();
+  $(".topnav").removeClass("current");
+  $(this).addClass("current");
+  $(".toggle").css("display", "none");
+  $("#nodeul-monthly").toggle();
 });
 
 $("a.button.apply").click(function (e) {
@@ -313,8 +316,8 @@ $(function () {
 
   function menuFunction() {
     if (
-      document.body.scrollTop > 100 ||
-      document.documentElement.scrollTop > 100
+      document.body.scrollTop > 50 ||
+      document.documentElement.scrollTop > 50
     ) {
       $(".menu__btn").css("display", "flex");
     } else {
@@ -324,8 +327,8 @@ $(function () {
 
   function switchFunction() {
     if (
-      document.body.scrollTop > 100 ||
-      document.documentElement.scrollTop > 100
+      document.body.scrollTop > 50 ||
+      document.documentElement.scrollTop > 50
     ) {
       $(".switch").css("display", "block");
     } else {

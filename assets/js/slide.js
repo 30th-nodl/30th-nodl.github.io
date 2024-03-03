@@ -1,3 +1,5 @@
+// around
+
 $(function () {
   var slider01 = new Swiper(".gallery-slider-01", {
     autoplay: {
@@ -82,8 +84,6 @@ $(function () {
   thumbs03.controller.control = slider03;
 });
 
-
-
 $(function () {
   var slider04 = new Swiper(".gallery-slider-04", {
     autoplay: {
@@ -110,4 +110,34 @@ $(function () {
 
   slider04.controller.control = thumbs04;
   thumbs04.controller.control = slider04;
+});
+
+// nodeul-monthly
+
+$(function () {
+  var slider05 = new Swiper(".gallery-slider-05", {
+    autoplay: {
+      delay: 4000,
+    },
+
+    slidesPerView: 1,
+    centeredSlides: true,
+    loop: true,
+    loopedSlides: 37, //슬라이드 수와 동일한 값을 지정
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+
+  var thumbs05 = new Swiper(".gallery-thumbs-05", {
+    slidesPerView: "auto",
+    spaceBetween: 8,
+    centeredSlides: true,
+    loop: true,
+    slideToClickedSlide: true,
+  });
+
+  slider05.controller.control = thumbs05;
+  thumbs05.controller.control = slider05;
 });

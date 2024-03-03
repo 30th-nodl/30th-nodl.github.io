@@ -1625,7 +1625,7 @@ body.dark #menu__toggle:checked + .menu__btn > span::after {
   }
 
   h1.slogan {
-    width: calc(100% - 4rem);
+    width: calc(100% - 1.5rem);
     margin-top: 0.125em;
   }
 
@@ -1665,7 +1665,7 @@ body.dark #menu__toggle:checked + .menu__btn > span::after {
   }
 
   nav#main ul {
-    margin: 2.5rem 0 0 0;
+    margin: 1.5rem 0 0 0;
   }
 
   nav#main a span.emoji {
@@ -1673,6 +1673,10 @@ body.dark #menu__toggle:checked + .menu__btn > span::after {
     height: 60px;
     width: 60px;
     font-size: 2em;
+  }
+
+  nav#main span.section {
+    margin-top: 0.125rem;
   }
 
   .li-archive {

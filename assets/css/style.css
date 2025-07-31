@@ -2190,9 +2190,6 @@ comment-content-wrap .comment-box #input {
   padding: 0.5rem 0;
 }
 
-.comment-content-wrap .comment-box table .col:nth-child(even) {
-  background: #ffffff20;
-}
 .comment-content-wrap .comment-box table .row {
   display: flex;
   flex-direction: row;

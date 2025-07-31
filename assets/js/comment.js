@@ -9,11 +9,11 @@ var inputComment = $("#comment");
 function isLoading(status) {
   if (status) {
     $("html, body").addClass("wait");
-    googleSubmitBtn.attr("disabled", true).html("보내는중...");
-    // googleSubmitBtn
-    //   .attr("disabled", true)
-    //   .children("img")
-    //   .attr("src", "../assets/img/svg/inbox-notification.svg");
+    // googleSubmitBtn.attr("disabled", true).html("보내는중...");
+    googleSubmitBtn
+      .attr("disabled", true)
+      .children("img")
+      .attr("src", "../assets/img/svg/inbox-notification.svg");
   } else {
     $("html, body").removeClass("wait");
     // googleSubmitBtn.attr("disabled", false).html("보내기");

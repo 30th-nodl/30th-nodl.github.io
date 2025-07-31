@@ -1,5 +1,4 @@
 // loading
-// __box border-radius
 
 document.getElementById("clock__box").style.borderTopRightRadius =
   Math.random() * 60 + 100 + "%";
@@ -32,8 +31,23 @@ document.getElementById("footer__box").style.borderBottomLeftRadius =
 
 var imgs = ["🍄", "🌿", "🌈", "🎉", "💌", "🥁", "🎒", "🌾", "🎈", "🎂", "✨"];
 
+function getNextAugust8() {
+  const now = new Date();
+  let year = now.getFullYear();
+
+  // 이번 연도 7월 31일 00:00
+  const target = new Date(`${year}-08-08T00:00:00`);
+
+  // 만약 지금보다 과거면 → 다음 해로 설정
+  if (now >= target) {
+    year += 1;
+  }
+
+  return new Date(`${year}-08-08T00:00:00`);
+}
+
 function updateClock() {
-  var countDownDate = new Date("August 8, 2025 00:00:00").getTime();
+  var countDownDate = getNextAugust8().getTime(); // ✨ 변경된 부분
   var d = new Date();
   var distance = countDownDate - d;
 
@@ -55,35 +69,25 @@ function updateClock() {
     hours = 12;
   }
 
-  var daysE = "";
-  var hoursE = "";
-  var minutesE = "";
-  var secondsE = "";
+  var daysE = "",
+    hoursE = "",
+    minutesE = "",
+    secondsE = "";
 
   for (i = 0; i < days.toString().length; i++) {
-    var stringH = days.toString().charAt(i);
-    var numberH = parseInt(stringH);
+    var numberH = parseInt(days.toString().charAt(i));
     daysE += imgs[numberH];
   }
-
   for (i = 0; i < hours.toString().length; i++) {
-    var stringH = hours.toString().charAt(i);
-    var numberH = parseInt(stringH);
+    var numberH = parseInt(hours.toString().charAt(i));
     hoursE += imgs[numberH];
   }
-
   for (i = 0; i < minutes.toString().length; i++) {
-    var stringH = minutes.toString().charAt(i);
-    var numberH = parseInt(stringH);
-
+    var numberH = parseInt(minutes.toString().charAt(i));
     minutesE += imgs[numberH];
   }
-
   for (i = 0; i < seconds.toString().length; i++) {
-    var stringH = seconds.toString().charAt(i);
-
-    var numberH = parseInt(stringH);
-
+    var numberH = parseInt(seconds.toString().charAt(i));
     secondsE += imgs[numberH];
   }
 
